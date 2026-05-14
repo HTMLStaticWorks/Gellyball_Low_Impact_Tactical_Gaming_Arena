@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Gellyball Arena</title>
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <!-- Fonts & CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { neonGreen: '#39ff14', neonBlue: '#00f3ff', darkBg: '#0b0f19', darkCard: '#111827' }, fontFamily: { sans: ['Inter', 'sans-serif'], heading: ['Orbitron', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="arena-bg antialiased selection:bg-neonGreen selection:text-black">
+
+    <header class="fixed w-full top-0 z-50 glass-panel border-b-0 border-neonGreen/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+            <a href="../index.html" class="font-heading text-2xl font-bold text-white"><i class="fa-solid fa-crosshairs text-neonGreen"></i> GELLY<span class="text-neonGreen">BALL</span></a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="../index.html" class="text-gray-300 hover:text-neonGreen">Home</a>
+                <a href="contact.html" class="text-neonGreen font-semibold hover:text-neonGreen">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="relative-z pt-20">
+        <!-- SECTION 1: Contact Banner -->
+        <section class="py-20 bg-darkCard border-b border-neonGreen/10 text-center relative overflow-hidden">
+            <div class="relative z-10 max-w-3xl mx-auto px-4 reveal">
+                <h1 class="text-4xl md:text-5xl font-heading font-bold text-white uppercase tracking-wider mb-4">Establish <span class="text-neonGreen">Comms</span></h1>
+                <p class="text-gray-400 text-lg">Reach out to HQ for bookings, inquiries, or support.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Contact Information (Moved up for better layout flow before form) -->
+        <section class="py-12 relative z-20 -mt-10">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal delay-100">
+                    <div class="glass-panel p-6 rounded-xl text-center bg-gray-900 border border-gray-800">
+                        <div class="w-12 h-12 mx-auto bg-neonGreen/10 text-neonGreen rounded-full flex items-center justify-center mb-4"><i class="fa-solid fa-location-dot text-xl"></i></div>
+                        <h4 class="text-white font-bold mb-2">Location</h4>
+                        <p class="text-sm text-gray-400">123 Tactical Way<br>Gaming District, TX 75001</p>
+                    </div>
+                    <div class="glass-panel p-6 rounded-xl text-center bg-gray-900 border border-gray-800">
+                        <div class="w-12 h-12 mx-auto bg-neonBlue/10 text-neonBlue rounded-full flex items-center justify-center mb-4"><i class="fa-solid fa-phone text-xl"></i></div>
+                        <h4 class="text-white font-bold mb-2">Dispatch</h4>
+                        <p class="text-sm text-gray-400">(555) 123-4567<br>Mon-Sun: 10AM - 10PM</p>
+                    </div>
+                    <div class="glass-panel p-6 rounded-xl text-center bg-gray-900 border border-gray-800">
+                        <div class="w-12 h-12 mx-auto bg-purple-500/10 text-purple-500 rounded-full flex items-center justify-center mb-4"><i class="fa-solid fa-envelope text-xl"></i></div>
+                        <h4 class="text-white font-bold mb-2">Email HQ</h4>
+                        <p class="text-sm text-gray-400">hq@gellyballarena.com<br>Support replies within 24h</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2 & 3 Combined visually: Contact Form & Map Section -->
+        <section class="py-12 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row gap-12">
+                    <!-- SECTION 2: Contact Form -->
+                    <div class="lg:w-1/2 reveal">
+                        <div class="glass-panel p-8 rounded-2xl">
+                            <h3 class="text-2xl font-heading text-white uppercase mb-6">Send a Message</h3>
+                            <form class="space-y-4">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-gray-400 text-xs mb-1">First Name</label>
+                                        <input type="text" class="w-full bg-gray-900 border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-neonGreen transition">
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-400 text-xs mb-1">Last Name</label>
+                                        <input type="text" class="w-full bg-gray-900 border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-neonGreen transition">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-400 text-xs mb-1">Email Address</label>
+                                    <input type="email" class="w-full bg-gray-900 border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-neonGreen transition">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-400 text-xs mb-1">Subject</label>
+                                    <select class="w-full bg-gray-900 border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-neonGreen transition">
+                                        <option>General Inquiry</option>
+                                        <option>Group Booking</option>
+                                        <option>Feedback</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-400 text-xs mb-1">Message</label>
+                                    <textarea rows="4" class="w-full bg-gray-900 border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-neonGreen transition"></textarea>
+                                </div>
+                                <button type="submit" class="btn-primary w-full mt-4">Transmit Message</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- SECTION 3: Google Map Section -->
+                    <div class="lg:w-1/2 reveal delay-100 h-full min-h-[400px]">
+                        <div class="w-full h-full glass-panel rounded-2xl overflow-hidden p-2">
+                            <!-- Placeholder for Google Map since iframes can cause issues without an API key, using a styled div with a map image -->
+                            <div class="w-full h-full min-h-[400px] bg-gray-900 rounded-xl relative overflow-hidden flex items-center justify-center">
+                                <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Map" class="absolute inset-0 w-full h-full object-cover opacity-30 grayscale mix-blend-luminosity">
+                                <div class="absolute inset-0 bg-neonGreen/5"></div>
+                                <div class="relative z-10 text-center">
+                                    <i class="fa-solid fa-location-crosshairs text-4xl text-neonGreen mb-2 animate-pulse"></i>
+                                    <div class="bg-black/80 px-4 py-2 rounded border border-neonGreen text-white font-heading text-sm">Gellyball Arena HQ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black border-t border-gray-800 py-8 text-center text-sm text-gray-500"><p>&copy; 2026 Gellyball Arena.</p></footer>
+</body>
+</html>

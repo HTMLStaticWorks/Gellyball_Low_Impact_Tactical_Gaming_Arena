@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register | Gellyball Arena</title>
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <!-- Fonts & CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { neonGreen: '#39ff14', neonBlue: '#00f3ff', darkBg: '#0b0f19', darkCard: '#111827' }, fontFamily: { sans: ['Inter', 'sans-serif'], heading: ['Orbitron', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="arena-bg antialiased selection:bg-neonBlue selection:text-black min-h-screen flex flex-col">
+
+    <header class="fixed w-full top-0 z-50 glass-panel border-b-0 border-neonBlue/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+            <a href="../index.html" class="font-heading text-2xl font-bold text-white"><i class="fa-solid fa-crosshairs text-neonBlue"></i> GELLY<span class="text-neonBlue">BALL</span></a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="../index.html" class="text-gray-300 hover:text-neonBlue">Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="relative-z pt-32 pb-20 flex-grow flex items-center justify-center">
+        <div class="max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-panel rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-[0_0_30px_rgba(0,243,255,0.1)]">
+                
+                <!-- Left Side: Login Form & Password Recovery -->
+                <div class="md:w-1/2 p-8 md:p-12 border-r border-gray-800 relative">
+                    <!-- SECTION 1: Login Form -->
+                    <section class="reveal">
+                        <h2 class="text-3xl font-heading text-white uppercase mb-6">Player <span class="text-neonBlue">Login</span></h2>
+                        <form class="space-y-4 mb-6">
+                            <div>
+                                <label class="block text-gray-400 text-xs mb-1 uppercase tracking-wider">Callsign / Email</label>
+                                <div class="relative">
+                                    <i class="fa-solid fa-user absolute left-3 top-3 text-gray-500"></i>
+                                    <input type="text" class="w-full bg-gray-900 border border-gray-700 rounded py-2 pl-10 pr-4 text-white focus:outline-none focus:border-neonBlue transition" placeholder="Enter your email">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-gray-400 text-xs mb-1 uppercase tracking-wider">Access Code</label>
+                                <div class="relative">
+                                    <i class="fa-solid fa-lock absolute left-3 top-3 text-gray-500"></i>
+                                    <input type="password" class="w-full bg-gray-900 border border-gray-700 rounded py-2 pl-10 pr-4 text-white focus:outline-none focus:border-neonBlue transition" placeholder="Enter password">
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mt-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="form-checkbox bg-gray-900 border-gray-700 text-neonBlue rounded h-4 w-4">
+                                    <span class="ml-2 text-xs text-gray-400">Remember Me</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="w-full bg-neonBlue text-black font-bold uppercase tracking-wider py-3 rounded hover:bg-white transition mt-4">Login to System</button>
+                        </form>
+                    </section>
+
+                    <!-- SECTION 4: Password Recovery CTA -->
+                    <section class="reveal delay-100 text-center border-t border-gray-800 pt-4 mt-6">
+                        <p class="text-sm text-gray-400">Lost your access codes?</p>
+                        <a href="#" class="text-neonBlue text-sm hover:text-white transition uppercase font-bold">Initiate Password Recovery</a>
+                    </section>
+                </div>
+
+                <!-- Right Side: Registration & Social Login -->
+                <div class="md:w-1/2 p-8 md:p-12 bg-gray-900/50">
+                    <!-- SECTION 2: Registration Form -->
+                    <section class="reveal delay-100 mb-8">
+                        <h2 class="text-3xl font-heading text-white uppercase mb-6">New <span class="text-neonGreen">Recruit</span></h2>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-gray-400 text-xs mb-1 uppercase tracking-wider">Email Address</label>
+                                <input type="email" class="w-full bg-gray-800 border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-neonGreen transition" placeholder="Email for verification">
+                            </div>
+                            <div>
+                                <label class="block text-gray-400 text-xs mb-1 uppercase tracking-wider">Create Access Code</label>
+                                <input type="password" class="w-full bg-gray-800 border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-neonGreen transition" placeholder="Strong password">
+                            </div>
+                            <button type="submit" class="w-full border border-neonGreen text-neonGreen font-bold uppercase tracking-wider py-3 rounded hover:bg-neonGreen hover:text-black transition">Create Account</button>
+                        </form>
+                    </section>
+
+                    <!-- SECTION 3: Social Login Options -->
+                    <section class="reveal delay-200 text-center">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="h-px bg-gray-700 flex-1"></div>
+                            <span class="text-xs text-gray-500 uppercase tracking-wider">Or Connect via Comms</span>
+                            <div class="h-px bg-gray-700 flex-1"></div>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <button class="w-full bg-[#4285F4] text-white py-2 rounded flex items-center justify-center gap-3 hover:opacity-90 transition text-sm">
+                                <i class="fa-brands fa-google"></i> Continue with Google
+                            </button>
+                            <button class="w-full bg-[#1877F2] text-white py-2 rounded flex items-center justify-center gap-3 hover:opacity-90 transition text-sm">
+                                <i class="fa-brands fa-facebook-f"></i> Continue with Facebook
+                            </button>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black border-t border-gray-800 py-6 text-center text-sm text-gray-500 mt-auto"><p>&copy; 2026 Gellyball Arena.</p></footer>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

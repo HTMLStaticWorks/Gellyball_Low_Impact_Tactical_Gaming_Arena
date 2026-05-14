@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | Gellyball Arena</title>
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <!-- Fonts & CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { neonGreen: '#39ff14', neonBlue: '#00f3ff', darkBg: '#0b0f19', darkCard: '#111827' }, fontFamily: { sans: ['Inter', 'sans-serif'], heading: ['Orbitron', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-darkBg antialiased selection:bg-neonGreen selection:text-black min-h-screen flex flex-col justify-center relative overflow-hidden">
+
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Arena Background" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/80"></div>
+        <!-- Grid overlay -->
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(57,255,20,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(57,255,20,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+    </div>
+
+    <main class="relative-z max-w-3xl w-full mx-auto px-4 text-center">
+        <!-- SECTION 2: Launch Announcement (Moved up for logic) -->
+        <section class="mb-12 reveal">
+            <a href="../index.html" class="inline-block font-heading text-2xl font-bold text-white mb-8 border border-gray-800 bg-black/50 px-6 py-2 rounded-full">
+                <i class="fa-solid fa-crosshairs text-neonGreen"></i> GELLY<span class="text-neonGreen">BALL</span>
+            </a>
+            <h1 class="text-4xl md:text-6xl font-heading font-black text-white uppercase tracking-wider mb-4">Arena <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonGreen to-neonBlue">Deployment</span></h1>
+            <p class="text-gray-300 text-lg max-w-xl mx-auto">Our 20,000 sq ft tactical combat facility is currently under construction. Prepare for deployment soon.</p>
+        </section>
+
+        <!-- SECTION 1: Countdown Timer -->
+        <section class="mb-16 reveal delay-100">
+            <div class="flex justify-center gap-4 md:gap-8">
+                <div class="glass-panel p-4 rounded-xl min-w-[80px] md:min-w-[100px]">
+                    <div class="text-3xl md:text-5xl font-heading font-bold text-neonGreen mb-1">14</div>
+                    <div class="text-xs text-gray-400 uppercase tracking-widest">Days</div>
+                </div>
+                <div class="glass-panel p-4 rounded-xl min-w-[80px] md:min-w-[100px]">
+                    <div class="text-3xl md:text-5xl font-heading font-bold text-neonGreen mb-1">08</div>
+                    <div class="text-xs text-gray-400 uppercase tracking-widest">Hours</div>
+                </div>
+                <div class="glass-panel p-4 rounded-xl min-w-[80px] md:min-w-[100px]">
+                    <div class="text-3xl md:text-5xl font-heading font-bold text-neonGreen mb-1">45</div>
+                    <div class="text-xs text-gray-400 uppercase tracking-widest">Mins</div>
+                </div>
+                <div class="glass-panel p-4 rounded-xl min-w-[80px] md:min-w-[100px]">
+                    <div class="text-3xl md:text-5xl font-heading font-bold text-neonGreen mb-1">22</div>
+                    <div class="text-xs text-gray-400 uppercase tracking-widest">Secs</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Newsletter Signup -->
+        <section class="mb-12 reveal delay-200">
+            <p class="text-sm text-gray-400 uppercase tracking-wider mb-4">Get early access codes and grand opening invites.</p>
+            <form class="flex flex-col sm:flex-row gap-2 justify-center max-w-lg mx-auto">
+                <input type="email" placeholder="Enter comms email" class="bg-gray-900/80 border border-gray-700 text-white px-4 py-3 rounded w-full focus:outline-none focus:border-neonGreen backdrop-blur">
+                <button type="submit" class="bg-neonGreen text-black font-bold uppercase tracking-wide px-8 py-3 rounded hover:bg-green-400 transition whitespace-nowrap">Notify Me</button>
+            </form>
+        </section>
+
+        <!-- SECTION 4: Social Media Links -->
+        <section class="reveal delay-300">
+            <div class="flex justify-center gap-4">
+                <a href="#" class="w-10 h-10 rounded-full border border-gray-700 bg-gray-900/50 flex items-center justify-center text-gray-400 hover:text-neonGreen hover:border-neonGreen transition"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full border border-gray-700 bg-gray-900/50 flex items-center justify-center text-gray-400 hover:text-neonBlue hover:border-neonBlue transition"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full border border-gray-700 bg-gray-900/50 flex items-center justify-center text-gray-400 hover:text-pink-500 hover:border-pink-500 transition"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

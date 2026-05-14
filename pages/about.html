@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Gellyball Arena</title>
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { colors: { neonGreen: '#39ff14', neonBlue: '#00f3ff', darkBg: '#0b0f19', darkCard: '#111827' }, fontFamily: { sans: ['Inter', 'sans-serif'], heading: ['Orbitron', 'sans-serif'], } } }
+        }
+    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="arena-bg antialiased selection:bg-neonGreen selection:text-black">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 glass-panel border-b-0 border-neonGreen/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="../index.html" class="font-heading text-2xl font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-crosshairs text-neonGreen"></i> GELLY<span class="text-neonGreen">BALL</span>
+                </a>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="../index.html" class="text-gray-300 transition hover:text-neonGreen">Home</a>
+                    <a href="about.html" class="text-neonGreen font-semibold transition hover:text-neonGreen">About</a>
+                    <a href="services.html" class="text-gray-300 transition hover:text-neonGreen">Services</a>
+                    <a href="pricing.html" class="text-gray-300 transition hover:text-neonGreen">Pricing</a>
+                    <a href="contact.html" class="text-gray-300 transition hover:text-neonGreen">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner (Not counted as a section, just a header) -->
+    <div class="pt-28 pb-12 bg-darkCard border-b border-neonGreen/10 text-center">
+        <h1 class="text-4xl font-heading font-bold text-white uppercase tracking-wider">About <span class="text-neonGreen">Us</span></h1>
+        <p class="text-gray-400 mt-2">Discover the story behind the arena.</p>
+    </div>
+
+    <main class="relative-z">
+        <!-- SECTION 1: Company Story -->
+        <section class="py-20 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2 reveal">
+                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Arena Story" class="rounded-xl shadow-neon-green grayscale hover:grayscale-0 transition duration-500">
+                    </div>
+                    <div class="md:w-1/2 reveal delay-100">
+                        <h2 class="text-3xl font-heading font-bold text-white uppercase mb-6">Our <span class="text-neonGreen">Origins</span></h2>
+                        <p class="text-gray-400 mb-4">Founded in 2024 by tactical gaming enthusiasts, our arena was built with one goal: to provide the ultimate low-impact combat experience. We realized paintball was too painful for younger players, and laser tag lacked the visceral feel of a real projectile.</p>
+                        <p class="text-gray-400 mb-6">Enter Gellyball. We transformed an abandoned warehouse into a 20,000 sq ft neon-lit combat grid, complete with modular bunkers, sniper towers, and UV environments.</p>
+                        <div class="flex gap-8 border-t border-gray-800 pt-6">
+                            <div>
+                                <div class="text-3xl font-heading text-neonGreen font-bold counter" data-target="20000">0</div>
+                                <div class="text-sm text-gray-500 uppercase">Sq Ft Arena</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-heading text-neonGreen font-bold counter" data-target="50000">0</div>
+                                <div class="text-sm text-gray-500 uppercase">Players Hosted</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Mission & Vision -->
+        <section class="py-20 bg-darkCard/50 border-y border-neonGreen/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="glass-panel p-10 rounded-2xl reveal border-l-4 border-neonGreen">
+                        <div class="w-16 h-16 bg-neonGreen/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-bullseye text-3xl text-neonGreen"></i>
+                        </div>
+                        <h3 class="text-2xl font-heading text-white uppercase mb-4">Our Mission</h3>
+                        <p class="text-gray-400">To deliver heart-pounding, adrenaline-fueled entertainment in a safe, inclusive, and highly immersive environment. We strive to create unforgettable memories for players of all ages, fostering teamwork, communication, and sportsmanship.</p>
+                    </div>
+                    <div class="glass-panel p-10 rounded-2xl reveal delay-100 border-l-4 border-neonBlue">
+                        <div class="w-16 h-16 bg-neonBlue/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-eye text-3xl text-neonBlue"></i>
+                        </div>
+                        <h3 class="text-2xl font-heading text-white uppercase mb-4">Our Vision</h3>
+                        <p class="text-gray-400">To become the premier destination for tactical gaming entertainment nationwide, pioneering new technologies in the Gellyball industry and continually evolving our arenas to offer next-generation combat simulations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Team Members -->
+        <section class="py-20 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl font-heading font-bold text-white uppercase mb-4">Command <span class="text-neonGreen">Staff</span></h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Meet the veterans who keep the arena running and ensure your safety.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+                    <!-- Member 1 -->
+                    <div class="reveal">
+                        <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-2 border-neonGreen mb-4 p-1">
+                            <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition duration-300">
+                        </div>
+                        <h4 class="text-lg font-heading text-white">Marcus "Zero" Kane</h4>
+                        <p class="text-sm text-neonGreen mb-2">Arena Director</p>
+                    </div>
+                    <!-- Member 2 -->
+                    <div class="reveal delay-100">
+                        <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-2 border-gray-700 mb-4 p-1">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition duration-300">
+                        </div>
+                        <h4 class="text-lg font-heading text-white">Sarah "Ghost" Vance</h4>
+                        <p class="text-sm text-gray-400 mb-2">Head Referee</p>
+                    </div>
+                    <!-- Member 3 -->
+                    <div class="reveal delay-200">
+                        <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-2 border-gray-700 mb-4 p-1">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition duration-300">
+                        </div>
+                        <h4 class="text-lg font-heading text-white">David "Rook" Chen</h4>
+                        <p class="text-sm text-gray-400 mb-2">Armory Technician</p>
+                    </div>
+                    <!-- Member 4 -->
+                    <div class="reveal delay-300">
+                        <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-2 border-gray-700 mb-4 p-1">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition duration-300">
+                        </div>
+                        <h4 class="text-lg font-heading text-white">Elena "Viper" Rostova</h4>
+                        <p class="text-sm text-gray-400 mb-2">Event Coordinator</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Client Testimonials -->
+        <section class="py-20 bg-darkCard/80 border-t border-neonGreen/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl font-heading font-bold text-white uppercase mb-4">After Action <span class="text-neonGreen">Reports</span></h2>
+                    <p class="text-gray-400">Real feedback from our squads.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="glass-panel p-8 rounded-xl relative reveal">
+                        <i class="fa-solid fa-quote-left text-4xl text-neonGreen/20 absolute top-4 left-4"></i>
+                        <div class="flex text-neonGreen mb-4 relative z-10 pl-6">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-6 relative z-10 pl-6">"The facility is absolutely incredible. The staff makes sure everyone is safe but still having the time of their lives."</p>
+                        <h5 class="text-white font-bold pl-6">- The Martinez Family</h5>
+                    </div>
+                    <div class="glass-panel p-8 rounded-xl relative reveal delay-100">
+                        <i class="fa-solid fa-quote-left text-4xl text-neonGreen/20 absolute top-4 left-4"></i>
+                        <div class="flex text-neonGreen mb-4 relative z-10 pl-6">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 italic mb-6 relative z-10 pl-6">"Hosted our company retreat here. Way better than an escape room. The communication required to win brought our team closer."</p>
+                        <h5 class="text-white font-bold pl-6">- TechCorp HR</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 py-8">
+        <div class="max-w-7xl mx-auto text-center text-sm text-gray-500">
+            <p>&copy; 2026 Gellyball Arena. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

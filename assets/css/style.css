@@ -1,0 +1,136 @@
+/* 
+ * Gellyball & Low-Impact Tactical Gaming Arena
+ * Main Stylesheet
+ */
+
+:root {
+  --neon-green: #39ff14;
+  --neon-blue: #00f3ff;
+  --dark-bg: #0b0f19;
+  --glass-bg: rgba(15, 23, 42, 0.7);
+  --glass-border: rgba(57, 255, 20, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-green);
+}
+
+/* Base Styles */
+body {
+  background-color: var(--dark-bg);
+  color: #e2e8f0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+}
+body.light-mode {
+  --dark-bg: #f8fafc;
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  background-color: var(--dark-bg);
+  color: #0f172a;
+}
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Neon Text & Shadows */
+.text-neon-green {
+  color: var(--neon-green);
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+}
+.text-neon-blue {
+  color: var(--neon-blue);
+  text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+}
+.shadow-neon-green {
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
+}
+.hover-neon:hover {
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.6);
+  border-color: var(--neon-green);
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Buttons */
+.btn-primary {
+  background: transparent;
+  color: var(--neon-green);
+  border: 2px solid var(--neon-green);
+  padding: 0.75rem 2rem;
+  border-radius: 0.25rem;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 0; height: 100%;
+  background: var(--neon-green);
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+.btn-primary:hover::before {
+  width: 100%;
+}
+.btn-primary:hover {
+  color: var(--dark-bg);
+  box-shadow: 0 0 15px var(--neon-green);
+}
+
+/* Grid & Layout Utilities */
+.arena-bg {
+  background-image: radial-gradient(circle at center, #111827 0%, var(--dark-bg) 100%);
+  position: relative;
+}
+.arena-bg::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: 
+    linear-gradient(rgba(57, 255, 20, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(57, 255, 20, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+  pointer-events: none;
+}
+.relative-z {
+  position: relative;
+  z-index: 10;
+}

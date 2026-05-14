@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Details | Gellyball Arena</title>
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <!-- Fonts & CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { neonGreen: '#39ff14', neonBlue: '#00f3ff', darkBg: '#0b0f19', darkCard: '#111827' }, fontFamily: { sans: ['Inter', 'sans-serif'], heading: ['Orbitron', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="arena-bg antialiased selection:bg-neonGreen selection:text-black">
+
+    <header class="fixed w-full top-0 z-50 glass-panel border-b-0 border-neonGreen/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+            <a href="../index.html" class="font-heading text-2xl font-bold text-white"><i class="fa-solid fa-crosshairs text-neonGreen"></i> GELLY<span class="text-neonGreen">BALL</span></a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="../index.html" class="text-gray-300 hover:text-neonGreen">Home</a>
+                <a href="blog.html" class="text-neonGreen font-semibold hover:text-neonGreen">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="relative-z pt-20">
+        <!-- SECTION 1: Blog Hero Banner -->
+        <section class="relative py-20 bg-darkCard border-b border-neonGreen/10">
+            <div class="max-w-4xl mx-auto px-4 text-center reveal">
+                <span class="bg-neonGreen/20 text-neonGreen px-3 py-1 rounded text-sm uppercase tracking-wider font-bold mb-4 inline-block">Tactics</span>
+                <h1 class="text-4xl md:text-5xl font-heading font-bold text-white uppercase tracking-wider mb-6">Mastering the Surge Blaster: Pro Tips</h1>
+                <div class="flex items-center justify-center gap-4 text-gray-400 text-sm">
+                    <span><i class="fa-solid fa-user mr-2 text-neonGreen"></i> Marcus Kane</span>
+                    <span><i class="fa-solid fa-calendar mr-2 text-neonGreen"></i> Oct 15, 2026</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row gap-12">
+            <!-- Main Content Area -->
+            <div class="md:w-2/3">
+                <!-- SECTION 2: Full Article Content -->
+                <section class="prose prose-invert max-w-none reveal">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Article Image" class="w-full h-80 object-cover rounded-xl mb-8">
+                    <h3 class="text-2xl font-heading text-white mb-4">The Standard Issue Powerhouse</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">The Surge Blaster X1 is the backbone of our armory. While many players look immediately to the Pro upgrades, mastering the standard issue blaster is the true mark of a veteran. Here is how you can dominate the arena without spending an extra dime.</p>
+                    <h3 class="text-xl font-heading text-white mb-4 mt-8">Burst Firing is Key</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Unlike paintballs, gellyballs are incredibly light. If you hold down the trigger for a full auto spray, the air turbulence from the rapid fire will cause the balls to spread wildly. Instead, use controlled 3-5 round bursts.</p>
+                    <blockquote class="border-l-4 border-neonGreen pl-4 py-2 my-8 bg-gray-900/50 italic text-gray-300">"Amateurs spray and pray. Veterans control their fire and secure the objective." - Sarah Vance, Head Ref</blockquote>
+                </section>
+
+                <!-- SECTION 4: Related Articles -->
+                <section class="mt-16 pt-8 border-t border-gray-800 reveal delay-100">
+                    <h3 class="text-2xl font-heading text-white uppercase mb-6">Related <span class="text-neonGreen">Briefings</span></h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="glass-panel p-4 rounded-xl group hover:border-neonGreen transition">
+                            <h4 class="font-heading text-white mb-2 group-hover:text-neonGreen transition"><a href="#">Flanking the Labyrinth</a></h4>
+                            <p class="text-sm text-gray-400">A breakdown of the best routes through our most complex arena zone.</p>
+                        </div>
+                        <div class="glass-panel p-4 rounded-xl group hover:border-neonGreen transition">
+                            <h4 class="font-heading text-white mb-2 group-hover:text-neonGreen transition"><a href="#">Communication Protocols</a></h4>
+                            <p class="text-sm text-gray-400">How to call out enemy positions without giving away your own.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="md:w-1/3">
+                <!-- SECTION 3: Sidebar Widgets -->
+                <section class="space-y-8 reveal">
+                    <!-- Widget 1: Author -->
+                    <div class="glass-panel p-6 rounded-xl text-center">
+                        <div class="w-20 h-20 mx-auto rounded-full overflow-hidden border-2 border-neonGreen mb-4">
+                            <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Author" class="w-full h-full object-cover grayscale">
+                        </div>
+                        <h4 class="font-heading text-white font-bold">Marcus Kane</h4>
+                        <p class="text-sm text-neonGreen mb-4">Arena Director</p>
+                        <p class="text-sm text-gray-400">Former competitive paintball player turned Gellyball advocate.</p>
+                    </div>
+
+                    <!-- Widget 2: Categories -->
+                    <div class="glass-panel p-6 rounded-xl">
+                        <h4 class="font-heading text-white font-bold mb-4 border-b border-gray-800 pb-2">Categories</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="#" class="hover:text-neonGreen transition flex justify-between"><span>Tactics</span> <span>(12)</span></a></li>
+                            <li><a href="#" class="hover:text-neonGreen transition flex justify-between"><span>Gear & Armory</span> <span>(8)</span></a></li>
+                            <li><a href="#" class="hover:text-neonGreen transition flex justify-between"><span>Tournament News</span> <span>(5)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Widget 3: Newsletter -->
+                    <div class="glass-panel p-6 rounded-xl border border-neonGreen/30 bg-neonGreen/5">
+                        <h4 class="font-heading text-white font-bold mb-2">Subscribe</h4>
+                        <p class="text-xs text-gray-400 mb-4">Get the latest intel directly in your inbox.</p>
+                        <input type="email" placeholder="Email" class="w-full bg-gray-900 border border-gray-700 text-white px-3 py-2 rounded mb-2 text-sm">
+                        <button class="w-full bg-neonGreen text-black font-bold uppercase text-sm py-2 rounded hover:bg-green-400 transition">Join</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black border-t border-gray-800 py-8 text-center text-sm text-gray-500"><p>&copy; 2026 Gellyball Arena.</p></footer>
+</body>
+</html>
