@@ -17,13 +17,51 @@
 <body class="arena-bg antialiased selection:bg-neonGreen selection:text-black">
 
     <header class="fixed w-full top-0 z-50 glass-panel border-b-0 border-neonGreen/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
-            <a href="../index.html" class="font-heading text-2xl font-bold text-white"><i class="fa-solid fa-crosshairs text-neonGreen"></i> GELLY<span class="text-neonGreen">BALL</span></a>
-            <nav class="hidden md:flex space-x-8">
-                <a href="../index.html" class="text-gray-300 hover:text-neonGreen">Home</a>
-                <a href="blog.html" class="text-neonGreen font-semibold hover:text-neonGreen">Blog</a>
-                <a href="contact.html" class="text-gray-300 hover:text-neonGreen">Contact</a>
-            </nav>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="../index.html" class="font-heading text-2xl font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-crosshairs text-neonGreen"></i> GELLY<span class="text-neonGreen">BALL</span>
+                </a>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <div class="relative group">
+                        <button class="flex items-center gap-1 text-gray-300 transition hover:text-neonGreen">
+                            Home <i class="fa-solid fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-40 glass-panel opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60] border border-neonGreen/20 rounded-lg overflow-hidden">
+                            <a href="../index.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-neonGreen hover:bg-neonGreen/10 transition">Home 1</a>
+                            <a href="../index-2.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-neonGreen hover:bg-neonGreen/10 transition">Home 2</a>
+                        </div>
+                    </div>
+                    <a href="blog.html" class="text-neonGreen font-semibold transition hover:text-neonGreen">Blog</a>
+                    <a href="contact.html" class="text-gray-300 transition hover:text-neonGreen">Contact</a>
+                    <button id="theme-toggle" class="text-gray-300 hover:text-neonGreen transition ml-8"><i class="fa-solid fa-moon"></i></button>
+                    <button id="rtl-toggle" class="text-gray-300 hover:text-neonGreen transition font-bold text-xs border border-gray-700 px-2 py-1 rounded ml-2">RTL</button>
+                </nav>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center gap-4">
+                    <button class="text-gray-300 hover:text-neonGreen transition"><i class="fa-solid fa-moon"></i></button>
+                    <button id="rtl-toggle-mobile" class="text-gray-300 hover:text-neonGreen transition font-bold text-xs border border-gray-700 px-2 py-1 rounded">RTL</button>
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <div class="space-y-1">
+                    <button class="flex items-center justify-between w-full px-3 py-2 text-gray-300 hover:text-neonGreen font-medium focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+                        Home <i class="fa-solid fa-chevron-down text-xs transition-transform"></i>
+                    </button>
+                    <div class="hidden ml-4 space-y-1 border-l border-neonGreen/20">
+                        <a href="../index.html" class="block px-3 py-2 text-gray-400 hover:text-neonGreen text-sm">Home 1</a>
+                        <a href="../index-2.html" class="block px-3 py-2 text-gray-400 hover:text-neonGreen text-sm">Home 2</a>
+                    </div>
+                </div>
+                <a href="blog.html" class="block px-3 py-2 text-neonGreen font-medium">Blog</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen">Contact</a>
+            </div>
         </div>
     </header>
 

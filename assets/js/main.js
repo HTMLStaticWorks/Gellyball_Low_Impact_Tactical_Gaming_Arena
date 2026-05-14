@@ -29,6 +29,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // 2.1 RTL/LTR Toggle
+  const rtlToggles = document.querySelectorAll('#rtl-toggle, #rtl-toggle-mobile');
+  const htmlElement = document.documentElement;
+  
+  if (rtlToggles.length > 0) {
+    rtlToggles.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const isRTL = htmlElement.getAttribute('dir') === 'rtl';
+        const newDir = isRTL ? 'ltr' : 'rtl';
+        const newText = isRTL ? 'RTL' : 'LTR';
+        
+        htmlElement.setAttribute('dir', newDir);
+        localStorage.setItem('dir', newDir);
+        
+        // Update all buttons
+        rtlToggles.forEach(b => b.innerHTML = newText);
+      });
+    });
+
+    // Check saved direction
+    if (localStorage.getItem('dir') === 'rtl') {
+      htmlElement.setAttribute('dir', 'rtl');
+      rtlToggles.forEach(b => b.innerHTML = 'LTR');
+    }
+  }
+
   // 3. Scroll Reveal Animation
   const revealElements = document.querySelectorAll('.reveal');
   const revealOptions = {

@@ -54,18 +54,27 @@
                 </div>
                 <!-- Desktop Menu -->
                 <nav class="hidden md:flex space-x-8 items-center">
-                    <a href="index.html" class="text-neonGreen font-semibold transition hover:text-neonGreen">Home</a>
-                    <a href="index-2.html" class="text-gray-300 transition hover:text-neonGreen">Home 2</a>
+                    <div class="relative group">
+                        <button class="flex items-center gap-1 text-neonGreen font-semibold transition hover:text-neonGreen">
+                            Home <i class="fa-solid fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-40 glass-panel opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60] border border-neonGreen/20 rounded-lg overflow-hidden">
+                            <a href="index.html" class="block px-4 py-2 text-sm text-neonGreen hover:bg-neonGreen/10 transition">Home 1</a>
+                            <a href="index-2.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-neonGreen hover:bg-neonGreen/10 transition">Home 2</a>
+                        </div>
+                    </div>
                     <a href="pages/about.html" class="text-gray-300 transition hover:text-neonGreen">About</a>
                     <a href="pages/services.html" class="text-gray-300 transition hover:text-neonGreen">Services</a>
                     <a href="pages/pricing.html" class="text-gray-300 transition hover:text-neonGreen">Pricing</a>
                     <a href="pages/contact.html" class="text-gray-300 transition hover:text-neonGreen">Contact</a>
                     <button id="theme-toggle" class="text-gray-300 hover:text-neonGreen transition"><i class="fa-solid fa-moon"></i></button>
-                    <a href="pages/login-register.html" class="btn-primary text-sm px-4 py-2">Book Now</a>
+                    <button id="rtl-toggle" class="text-gray-300 hover:text-neonGreen transition font-bold text-xs border border-gray-700 px-2 py-1 rounded ml-2">RTL</button>
+                    <a href="pages/booking.html" class="btn-primary text-sm px-4 py-2">Book Now</a>
                 </nav>
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center gap-4">
                     <button class="text-gray-300 hover:text-neonGreen transition"><i class="fa-solid fa-moon"></i></button>
+                    <button id="rtl-toggle-mobile" class="text-gray-300 hover:text-neonGreen transition font-bold text-xs border border-gray-700 px-2 py-1 rounded">RTL</button>
                     <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
@@ -75,13 +84,20 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-gray-800">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="block px-3 py-2 text-neonGreen font-medium">Home</a>
-                <a href="index-2.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen">Home 2</a>
+                <div class="space-y-1">
+                    <button class="flex items-center justify-between w-full px-3 py-2 text-neonGreen font-medium focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+                        Home <i class="fa-solid fa-chevron-down text-xs transition-transform"></i>
+                    </button>
+                    <div class="hidden ml-4 space-y-1 border-l border-neonGreen/20">
+                        <a href="index.html" class="block px-3 py-2 text-neonGreen text-sm">Home 1</a>
+                        <a href="index-2.html" class="block px-3 py-2 text-gray-400 hover:text-neonGreen text-sm">Home 2</a>
+                    </div>
+                </div>
                 <a href="pages/about.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen">About</a>
                 <a href="pages/services.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen">Services</a>
                 <a href="pages/pricing.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen">Pricing</a>
                 <a href="pages/contact.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen">Contact</a>
-                <a href="pages/login-register.html" class="block px-3 py-2 text-neonGreen border border-neonGreen rounded text-center mt-4">Book Now</a>
+                <a href="pages/booking.html" class="block px-3 py-2 text-neonGreen border border-neonGreen rounded text-center mt-4">Book Now</a>
             </div>
         </div>
     </header>
@@ -104,9 +120,6 @@
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="pages/pricing.html" class="btn-primary text-lg">View Pricing</a>
-                    <a href="#video" class="px-8 py-3 rounded text-white border border-gray-600 hover:border-neonBlue hover:text-neonBlue transition font-heading uppercase tracking-wider flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-play"></i> Watch Action
-                    </a>
                 </div>
             </div>
         </section>
