@@ -8,7 +8,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -29,55 +29,20 @@
 <body class="arena-bg antialiased selection:bg-neonGreen selection:text-black">
 
     <!-- Header -->
-    <header class="fixed w-full top-0 z-50 glass-panel border-b-0 border-neonGreen/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Streamlined Header -->
+    <header class="fixed w-full top-0 z-50 glass-panel border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 xl:px-8">
             <div class="flex justify-between items-center h-20">
-                <a href="../index.html" class="font-heading text-2xl font-bold text-white flex items-center gap-2">
-                    <i class="fa-solid fa-crosshairs text-neonGreen"></i> GELLY<span class="text-neonGreen">BALL</span>
-                </a>
-                <nav class="hidden md:flex space-x-8 items-center">
-                    <div class="relative group">
-                        <button class="flex items-center gap-1 text-gray-300 transition hover:text-neonGreen">
-                            Home <i class="fa-solid fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
-                        </button>
-                        <div class="absolute left-0 mt-2 w-40 glass-panel opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60] border border-neonGreen/20 rounded-lg overflow-hidden">
-                            <a href="../index.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-neonGreen hover:bg-neonGreen/10 transition">Home 1</a>
-                            <a href="../index-2.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-neonGreen hover:bg-neonGreen/10 transition">Home 2</a>
-                        </div>
-                    </div>
-                    <a href="about.html" class="text-gray-300 transition hover:text-neonGreen">About</a>
-                    <a href="services.html" class="text-gray-300 transition hover:text-neonGreen">Services</a>
-                    <a href="pricing.html" class="text-gray-300 transition hover:text-neonGreen">Pricing</a>
-                    <a href="contact.html" class="text-gray-300 transition hover:text-neonGreen">Contact</a>
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html" class="font-heading text-2xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-crosshairs text-neonGreen"></i>
+                        GELLY<span class="text-neonGreen">BALL</span>
+                    </a>
+                </div>
+                <div class="flex items-center gap-6">
                     <button id="theme-toggle" class="text-gray-300 hover:text-neonGreen transition"><i class="fa-solid fa-moon"></i></button>
-                    <button id="rtl-toggle" class="text-gray-300 hover:text-neonGreen transition font-bold text-xs border border-gray-700 px-2 py-1 rounded ml-2">RTL</button>
-                </nav>
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center gap-4">
-                    <button class="text-gray-300 hover:text-neonGreen transition"><i class="fa-solid fa-moon"></i></button>
-                    <button id="rtl-toggle-mobile" class="text-gray-300 hover:text-neonGreen transition font-bold text-xs border border-gray-700 px-2 py-1 rounded">RTL</button>
-                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
-                        <i class="fa-solid fa-bars text-2xl"></i>
-                    </button>
+                    <button id="rtl-toggle" class="text-gray-300 hover:text-neonGreen transition font-bold text-xs border border-gray-700 px-2 py-1 rounded">RTL</button>
                 </div>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-gray-800">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <div class="space-y-1">
-                    <button class="flex items-center justify-between w-full px-3 py-2 text-gray-300 hover:text-neonGreen font-medium focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
-                        Home <i class="fa-solid fa-chevron-down text-xs transition-transform"></i>
-                    </button>
-                    <div class="hidden ml-4 space-y-1 border-l border-neonGreen/20">
-                        <a href="../index.html" class="block px-3 py-2 text-gray-400 hover:text-neonGreen text-sm">Home 1</a>
-                        <a href="../index-2.html" class="block px-3 py-2 text-gray-400 hover:text-neonGreen text-sm">Home 2</a>
-                    </div>
-                </div>
-                <a href="about.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen">About</a>
-                <a href="services.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen">Services</a>
-                <a href="pricing.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen">Pricing</a>
-                <a href="contact.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen">Contact</a>
             </div>
         </div>
     </header>
@@ -90,15 +55,15 @@
                 <div class="absolute inset-0 bg-gradient-to-b from-darkBg via-transparent to-darkBg"></div>
             </div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-                <h1 class="text-5xl md:text-7xl font-heading font-black text-white uppercase tracking-tighter mb-6 reveal">
+                <h1 class="text-3xl sm:text-4xl md:text-7xl font-heading font-black text-white uppercase tracking-tighter mb-6 reveal">
                     Deploy Your <span class="text-neonGreen">Squad</span>
                 </h1>
                 <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-10 reveal delay-100">
                     The ultimate high-adrenaline birthday and event booking platform. Secure your sector and prepare for the mission of a lifetime.
                 </p>
-                <div class="flex justify-center gap-6 reveal delay-200">
-                    <a href="#packages" class="btn-primary px-8 py-4 text-lg">Start Booking</a>
-                    <a href="#why-us" class="px-8 py-4 rounded border border-gray-700 text-white hover:border-neonBlue hover:text-neonBlue transition uppercase font-heading tracking-widest text-sm">Why Us?</a>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 reveal delay-200">
+                    <a href="#packages" class="btn-primary w-full sm:w-auto px-8 py-4 text-lg text-center">Start Booking</a>
+                    <a href="#why-us" class="px-8 py-4 w-full sm:w-auto rounded border border-gray-700 text-white hover:border-neonBlue hover:text-neonBlue transition uppercase font-heading tracking-widest text-sm text-center">Why Us?</a>
                 </div>
             </div>
         </section>
@@ -111,14 +76,14 @@
                     <!-- Step 1: Select Package -->
                     <div class="lg:col-span-2 space-y-12">
                         <div class="reveal">
-                            <h2 class="text-3xl font-heading font-bold text-white uppercase mb-8 flex items-center gap-4">
+                            <h2 class="text-xl sm:text-3xl font-heading font-bold text-white uppercase mb-8 flex flex-wrap items-center gap-4">
                                 <span class="w-10 h-10 rounded-full bg-neonGreen text-black flex items-center justify-center font-black">1</span>
                                 Select Your <span class="text-neonGreen">Mission</span>
                             </h2>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <!-- Package 1 -->
-                                <div class="glass-panel p-6 rounded-2xl border border-gray-800 hover:border-neonGreen transition cursor-pointer group relative overflow-hidden" onclick="selectPackage(this, 'Recruit Strike')">
-                                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition">
+                                <div class="package-card glass-panel p-6 rounded-2xl border-2 border-gray-800 hover:border-neonGreen transition-all duration-300 cursor-pointer group relative overflow-hidden" onclick="selectPackage(this, 'Recruit Strike', 'neonGreen')">
+                                    <div class="checkmark-icon absolute top-0 right-0 p-4 opacity-0 transition-all duration-300 transform scale-50">
                                         <i class="fa-solid fa-circle-check text-2xl text-neonGreen"></i>
                                     </div>
                                     <h3 class="text-xl font-heading text-white mb-2 uppercase">Recruit Strike</h3>
@@ -131,9 +96,9 @@
                                     </ul>
                                 </div>
                                 <!-- Package 2 -->
-                                <div class="glass-panel p-6 rounded-2xl border-2 border-neonBlue bg-neonBlue/5 cursor-pointer relative overflow-hidden" onclick="selectPackage(this, 'Elite Ops')">
-                                    <div class="absolute top-0 right-0 p-4">
-                                        <i class="fa-solid fa-circle-check text-2xl text-neonBlue"></i>
+                                <div class="package-card glass-panel p-6 rounded-2xl border-2 border-neonBlue bg-neonBlue/5 cursor-pointer relative overflow-hidden selected" onclick="selectPackage(this, 'Elite Ops', 'neonBlue')">
+                                    <div class="checkmark-icon absolute top-0 right-0 p-4 opacity-100 transition-all duration-300 transform scale-100">
+                                        <i class="fa-solid fa-circle-check text-2xl text-neonBlue shadow-[0_0_15px_rgba(0,243,255,0.3)]"></i>
                                     </div>
                                     <div class="absolute top-4 left-4 bg-neonBlue text-black text-[10px] font-black px-2 py-1 rounded uppercase tracking-widest">Most Popular</div>
                                     <h3 class="text-xl font-heading text-white mb-2 uppercase mt-6">Elite Ops</h3>
@@ -150,7 +115,7 @@
 
                         <!-- Step 2: Choose Date & Time -->
                         <div class="reveal delay-100">
-                            <h2 class="text-3xl font-heading font-bold text-white uppercase mb-8 flex items-center gap-4">
+                            <h2 class="text-xl sm:text-3xl font-heading font-bold text-white uppercase mb-8 flex flex-wrap items-center gap-4">
                                 <span class="w-10 h-10 rounded-full bg-neonBlue text-black flex items-center justify-center font-black">2</span>
                                 Set Deployment <span class="text-neonBlue">Time</span>
                             </h2>
@@ -288,29 +253,40 @@
         </section>
     </main>
 
-    <footer class="bg-black border-t border-gray-800 py-12 text-center">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="font-heading text-2xl font-bold text-white mb-6">
-                <i class="fa-solid fa-crosshairs text-neonGreen"></i> GELLY<span class="text-neonGreen">BALL</span>
-            </div>
-            <p class="text-gray-500 text-sm mb-8">© 2026 Gellyball Tactical Arena. All rights reserved.</p>
-            <div class="flex justify-center gap-6">
-                <a href="#" class="text-gray-500 hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="text-gray-500 hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="text-gray-500 hover:text-white transition"><i class="fa-brands fa-twitter"></i></a>
-            </div>
-        </div>
+    <!-- Minimal Footer -->
+    <footer class="py-12 text-center text-xs text-gray-500 reveal">
+        <p>&copy; 2026 Gellyball Arena. All rights reserved.</p>
     </footer>
 
     <script>
-        function selectPackage(el, name) {
-            document.querySelectorAll('[onclick^="selectPackage"]').forEach(item => {
-                item.classList.remove('border-neonBlue', 'bg-neonBlue/5', 'border-2');
+        function selectPackage(el, name, color) {
+            // Reset all cards
+            document.querySelectorAll('.package-card').forEach(item => {
+                item.classList.remove('border-neonBlue', 'bg-neonBlue/5', 'border-neonGreen', 'bg-neonGreen/5', 'selected');
                 item.classList.add('border-gray-800');
+                // Hide checkmarks
+                const check = item.querySelector('.checkmark-icon');
+                if (check) {
+                    check.classList.add('opacity-0', 'scale-50');
+                    check.classList.remove('opacity-100', 'scale-100');
+                }
             });
+
+            // Select this card
             el.classList.remove('border-gray-800');
-            el.classList.add('border-neonBlue', 'bg-neonBlue/5', 'border-2');
+            el.classList.add(`border-${color}`, `bg-${color}/5`, 'selected');
+            
+            const check = el.querySelector('.checkmark-icon');
+            if (check) {
+                check.classList.remove('opacity-0', 'scale-50');
+                check.classList.add('opacity-100', 'scale-100');
+            }
+
             document.getElementById('summary-package').innerText = name;
+            
+            // Update total cost based on package (mock logic)
+            const cost = name === 'Elite Ops' ? '$499.00' : '$299.00';
+            document.querySelector('.text-2xl.font-black.text-neonGreen').innerText = cost;
         }
 
         function selectTime(el, time) {
@@ -336,5 +312,6 @@
 
         revealElements.forEach(el => revealOnScroll.observe(el));
     </script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

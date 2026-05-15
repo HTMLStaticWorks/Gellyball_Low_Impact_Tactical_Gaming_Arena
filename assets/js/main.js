@@ -15,17 +15,36 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 2. Dark/Light Mode Toggle
-  const themeToggle = document.getElementById('theme-toggle');
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('light-mode');
-      const isLight = document.body.classList.contains('light-mode');
-      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  const themeToggles = document.querySelectorAll('#theme-toggle, #theme-toggle-mobile');
+  if (themeToggles.length > 0) {
+    const updateThemeIcons = (isLight) => {
+      themeToggles.forEach(toggle => {
+        const themeIcon = toggle.querySelector('i');
+        if (themeIcon) {
+          if (isLight) {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+          } else {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+          }
+        }
+      });
+    };
+
+    themeToggles.forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+        const isLight = document.body.classList.contains('light-mode');
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        updateThemeIcons(isLight);
+      });
     });
 
     // Check saved theme
     if (localStorage.getItem('theme') === 'light') {
       document.body.classList.add('light-mode');
+      updateThemeIcons(true);
     }
   }
 

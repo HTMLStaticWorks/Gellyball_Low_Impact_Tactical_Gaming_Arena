@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="../assets/images/favicon.png">
     <!-- Fonts & CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = { darkMode: 'class', theme: { extend: { colors: { neonGreen: '#39ff14', neonBlue: '#00f3ff', darkBg: '#0b0f19', darkCard: '#111827' }, fontFamily: { sans: ['Inter', 'sans-serif'], heading: ['Orbitron', 'sans-serif'] } } } }
@@ -16,31 +16,43 @@
 </head>
 <body class="arena-bg antialiased selection:bg-neonBlue selection:text-black">
 
-    <header class="fixed w-full top-0 z-50 glass-panel border-b-0 border-neonBlue/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header class="fixed w-full top-0 z-50 glass-panel border-b-0 border-neonGreen/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 xl:px-8">
             <div class="flex justify-between items-center h-20">
-                <a href="../index.html" class="font-heading text-2xl font-bold text-white flex items-center gap-2">
-                    <i class="fa-solid fa-crosshairs text-neonBlue"></i> GELLY<span class="text-neonBlue">BALL</span>
-                </a>
-                <nav class="hidden md:flex space-x-8 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html" class="font-heading text-2xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-crosshairs text-neonGreen"></i>
+                        GELLY<span class="text-neonGreen">BALL</span>
+                    </a>
+                </div>
+                <!-- Desktop Menu (Links Centered) -->
+                <nav class="hidden lg:flex space-x-4 xl:space-x-8 items-center">
                     <div class="relative group">
-                        <button class="flex items-center gap-1 text-gray-300 transition hover:text-neonBlue">
+                        <button class="flex items-center gap-1 text-gray-300 transition hover:text-neonGreen">
                             Home <i class="fa-solid fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
                         </button>
-                        <div class="absolute left-0 mt-2 w-40 glass-panel opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60] border border-neonBlue/20 rounded-lg overflow-hidden">
-                            <a href="../index.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-neonBlue hover:bg-neonBlue/10 transition">Home 1</a>
-                            <a href="../index-2.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-neonBlue hover:bg-neonBlue/10 transition">Home 2</a>
+                        <div class="absolute left-0 mt-2 w-40 glass-panel opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60] border border-neonGreen/20 rounded-lg overflow-hidden">
+                            <a href="../index.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-neonGreen hover:bg-neonGreen/10 transition">Home 1</a>
+                            <a href="../index-2.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-neonGreen hover:bg-neonGreen/10 transition">Home 2</a>
                         </div>
                     </div>
-                    <a href="pricing.html" class="text-neonBlue font-semibold transition hover:text-neonBlue">Pricing</a>
-                    <a href="contact.html" class="text-gray-300 transition hover:text-neonBlue">Contact</a>
-                    <button id="theme-toggle" class="text-gray-300 hover:text-neonBlue transition"><i class="fa-solid fa-moon"></i></button>
-                    <button id="rtl-toggle" class="text-gray-300 hover:text-neonBlue transition font-bold text-xs border border-gray-700 px-2 py-1 rounded ml-2">RTL</button>
+                    <a href="about.html" class="text-gray-300 transition hover:text-neonGreen">About</a>
+                    <a href="services.html" class="text-gray-300 transition hover:text-neonGreen">Services</a>
+                    <a href="events.html" class="text-gray-300 transition hover:text-neonGreen">Events</a>
+                    <a href="pricing.html" class="text-neonGreen font-semibold transition hover:text-neonGreen">Pricing</a>
+                    <a href="contact.html" class="text-gray-300 transition hover:text-neonGreen">Contact</a>
                 </nav>
+
+                <!-- Action Items -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button id="theme-toggle" class="text-gray-300 hover:text-neonGreen transition"><i class="fa-solid fa-moon"></i></button>
+                    <button id="rtl-toggle" class="text-gray-300 hover:text-neonGreen transition font-bold text-xs border border-gray-700 px-2 py-1 rounded">RTL</button>
+                    <a href="booking.html" class="btn-primary text-sm px-4 py-2 ml-2">Book Now</a>
+                </div>
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center gap-4">
-                    <button class="text-gray-300 hover:text-neonBlue transition"><i class="fa-solid fa-moon"></i></button>
-                    <button id="rtl-toggle-mobile" class="text-gray-300 hover:text-neonBlue transition font-bold text-xs border border-gray-700 px-2 py-1 rounded">RTL</button>
+                <div class="lg:hidden flex items-center gap-4">
+                    <button id="theme-toggle-mobile" class="text-gray-300 hover:text-neonGreen transition"><i class="fa-solid fa-moon"></i></button>
+                    <button id="rtl-toggle-mobile" class="text-gray-300 hover:text-neonGreen transition font-bold text-xs border border-gray-700 px-2 py-1 rounded">RTL</button>
                     <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
@@ -48,19 +60,23 @@
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-gray-800">
+        <div id="mobile-menu" class="hidden lg:hidden glass-panel border-t border-gray-800">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <div class="space-y-1">
-                    <button class="flex items-center justify-between w-full px-3 py-2 text-gray-300 hover:text-neonBlue font-medium focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
-                        Home <i class="fa-solid fa-chevron-down text-xs transition-transform"></i>
+                    <button class="flex items-center justify-center gap-2 w-full px-3 py-2 text-gray-300 hover:text-neonGreen font-medium focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+                        Home <i class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
                     </button>
-                    <div class="hidden ml-4 space-y-1 border-l border-neonBlue/20">
-                        <a href="../index.html" class="block px-3 py-2 text-gray-400 hover:text-neonBlue text-sm">Home 1</a>
-                        <a href="../index-2.html" class="block px-3 py-2 text-gray-400 hover:text-neonBlue text-sm">Home 2</a>
+                    <div class="hidden space-y-1 text-center">
+                        <a href="../index.html" class="block px-3 py-2 text-gray-400 hover:text-neonGreen text-sm">Home 1</a>
+                        <a href="../index-2.html" class="block px-3 py-2 text-gray-400 hover:text-neonGreen text-sm">Home 2</a>
                     </div>
                 </div>
-                <a href="pricing.html" class="block px-3 py-2 text-neonBlue font-medium">Pricing</a>
-                <a href="contact.html" class="block px-3 py-2 text-gray-300 hover:text-neonBlue">Contact</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen text-center">About</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen text-center">Services</a>
+                <a href="events.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen text-center">Events</a>
+                <a href="pricing.html" class="block px-3 py-2 text-neonGreen font-medium text-center">Pricing</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen text-center">Contact</a>
+                <a href="booking.html" class="btn-primary block text-center mt-4">Book Now</a>
             </div>
         </div>
     </header>
@@ -78,63 +94,214 @@
         <!-- SECTION 2: Rental Pricing Cards -->
         <section class="py-20 relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12 reveal">
-                    <h2 class="text-2xl font-heading text-white uppercase">Walk-In Rates</h2>
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl font-heading font-bold text-white uppercase tracking-widest">Select Your <span class="text-neonBlue">Mission</span></h2>
+                    <p class="text-gray-400">Choose the duration of your deployment.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="glass-panel p-8 rounded-2xl text-center reveal">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="glass-panel p-8 rounded-2xl text-center reveal flex flex-col h-full border-b-4 border-gray-800">
                         <h3 class="text-xl font-heading text-white mb-2 uppercase">1-Hour Skirmish</h3>
                         <div class="text-4xl font-bold text-white mb-6">$20</div>
-                        <ul class="space-y-3 text-gray-400 mb-8 text-sm">
+                        <ul class="space-y-3 text-gray-400 mb-8 text-sm flex-grow w-fit mx-auto text-left">
                             <li><i class="fa-solid fa-check text-neonBlue mr-2"></i> Standard Blaster</li>
                             <li><i class="fa-solid fa-check text-neonBlue mr-2"></i> Safety Mask</li>
                             <li><i class="fa-solid fa-check text-neonBlue mr-2"></i> Unlimited Ammo</li>
                         </ul>
-                        <a href="booking.html" class="block py-2 rounded border border-gray-600 hover:border-neonBlue text-white hover:text-neonBlue transition">Select</a>
+                        <div class="mt-auto">
+                            <a href="booking.html" class="block py-2 rounded border border-gray-600 hover:border-neonBlue text-white hover:text-neonBlue transition uppercase font-bold text-xs tracking-widest">Select</a>
+                        </div>
                     </div>
-                    <div class="glass-panel p-8 rounded-2xl text-center border border-neonBlue shadow-neon-blue reveal delay-100 relative">
-                        <div class="absolute top-0 right-0 bg-neonBlue text-black text-xs font-bold px-3 py-1 uppercase rounded-bl-lg">Popular</div>
+                    <!-- Card 2 -->
+                    <div class="glass-panel p-8 rounded-2xl text-center border-2 border-neonBlue shadow-[0_0_30px_rgba(0,243,255,0.1)] reveal delay-100 relative flex flex-col h-full">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-neonBlue text-black text-[10px] font-bold px-4 py-1 uppercase rounded-full tracking-widest">Popular</div>
                         <h3 class="text-xl font-heading text-neonBlue mb-2 uppercase">2-Hour Campaign</h3>
                         <div class="text-4xl font-bold text-white mb-6">$35</div>
-                        <ul class="space-y-3 text-gray-400 mb-8 text-sm">
+                        <ul class="space-y-3 text-gray-400 mb-8 text-sm flex-grow w-fit mx-auto text-left">
                             <li><i class="fa-solid fa-check text-neonBlue mr-2"></i> Standard Blaster</li>
                             <li><i class="fa-solid fa-check text-neonBlue mr-2"></i> Safety Mask</li>
                             <li><i class="fa-solid fa-check text-neonBlue mr-2"></i> Unlimited Ammo</li>
+                            <li><i class="fa-solid fa-check text-neonBlue mr-2"></i> 1 Refreshment Voucher</li>
                         </ul>
-                        <a href="booking.html" class="block py-2 rounded bg-neonBlue text-black hover:bg-white transition font-bold uppercase">Book Now</a>
+                        <div class="mt-auto">
+                            <a href="booking.html" class="block py-3 rounded bg-neonBlue text-black hover:bg-white transition font-bold uppercase text-sm tracking-widest">Book Now</a>
+                        </div>
                     </div>
-                    <div class="glass-panel p-8 rounded-2xl text-center reveal delay-200">
+                    <!-- Card 3 - Centered on Tablet -->
+                    <div class="glass-panel p-8 rounded-2xl text-center reveal delay-200 flex flex-col h-full border-b-4 border-gray-800 md:col-span-2 lg:col-span-1 max-w-md mx-auto lg:max-w-none lg:mx-0">
                         <h3 class="text-xl font-heading text-white mb-2 uppercase">All-Day Pass</h3>
                         <div class="text-4xl font-bold text-white mb-6">$55</div>
-                        <ul class="space-y-3 text-gray-400 mb-8 text-sm">
+                        <ul class="space-y-3 text-gray-400 mb-8 text-sm flex-grow w-fit mx-auto text-left">
                             <li><i class="fa-solid fa-check text-neonBlue mr-2"></i> Pro Blaster Upgrade</li>
                             <li><i class="fa-solid fa-check text-neonBlue mr-2"></i> Tactical Vest Included</li>
                             <li><i class="fa-solid fa-check text-neonBlue mr-2"></i> Unlimited Ammo</li>
                         </ul>
-                        <a href="booking.html" class="block py-2 rounded border border-gray-600 hover:border-neonBlue text-white hover:text-neonBlue transition">Select</a>
+                        <div class="mt-auto">
+                            <a href="booking.html" class="block py-2 rounded border border-gray-600 hover:border-neonBlue text-white hover:text-neonBlue transition uppercase font-bold text-xs tracking-widest">Select</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 3: Event Packages -->
-        <section class="py-20 bg-darkCard/50 border-y border-neonBlue/10">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12 reveal">
-                    <h2 class="text-2xl font-heading text-white uppercase">Group Packages</h2>
-                </div>
-                <div class="flex flex-col md:flex-row gap-8">
-                    <div class="flex-1 glass-panel p-8 rounded-xl border-l-4 border-neonGreen reveal">
-                        <h3 class="text-2xl font-heading text-white mb-2">Alpha Squad (Party)</h3>
-                        <div class="text-neonGreen text-3xl font-bold mb-4">$299 <span class="text-sm text-gray-500 font-normal">/ 10 Players</span></div>
-                        <p class="text-gray-400 mb-6 text-sm">2 hours of private arena time, party room, and dedicated referee.</p>
-                        <a href="contact.html" class="text-neonGreen font-bold uppercase hover:text-white transition">Inquire Now <i class="fa-solid fa-arrow-right"></i></a>
+        <!-- RICH CONTENT SECTION 1: The Arsenal -->
+        <section class="py-24 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col-reverse lg:flex-row items-center gap-16">
+                    <div class="lg:w-1/2 reveal text-center lg:text-left">
+                        <div class="inline-block px-4 py-1 bg-neonBlue/10 text-neonBlue rounded-full text-xs font-bold uppercase tracking-widest mb-6">Equipment Intel</div>
+                        <h2 class="text-4xl md:text-5xl font-heading font-black text-white uppercase leading-tight mb-8">Included In <span class="text-neonBlue">Every Pass</span></h2>
+                        
+                        <div class="space-y-12 flex flex-col items-center lg:items-start w-fit mx-auto lg:mx-0">
+                            <div class="flex flex-col lg:flex-row items-center lg:items-start gap-6 text-center lg:text-left">
+                                <div class="w-20 h-20 shrink-0 bg-gray-900 border border-neonBlue/20 rounded-3xl flex items-center justify-center text-neonBlue text-3xl shadow-[0_0_20px_rgba(0,243,255,0.1)]">
+                                    <i class="fa-solid fa-gun"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-heading text-white uppercase mb-2 tracking-widest">The GellyBlaster</h4>
+                                    <p class="text-gray-400 max-w-sm">Electric-powered, low-impact tactical markers. High rate of fire with zero bruising. Every pass includes a fully charged blaster.</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col lg:flex-row items-center lg:items-start gap-6 text-center lg:text-left">
+                                <div class="w-20 h-20 shrink-0 bg-gray-900 border border-neonBlue/20 rounded-3xl flex items-center justify-center text-neonBlue text-3xl shadow-[0_0_20px_rgba(0,243,255,0.1)]">
+                                    <i class="fa-solid fa-mask"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-heading text-white uppercase mb-2 tracking-widest">Anti-Fog Safety Gear</h4>
+                                    <p class="text-gray-400 max-w-sm">Full-face protection with wide-angle thermal lenses. Sanitized after every use for your safety and comfort.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex-1 glass-panel p-8 rounded-xl border-l-4 border-purple-500 reveal delay-100">
-                        <h3 class="text-2xl font-heading text-white mb-2">Omega Corporate</h3>
-                        <div class="text-purple-500 text-3xl font-bold mb-4">$499 <span class="text-sm text-gray-500 font-normal">/ 20 Players</span></div>
-                        <p class="text-gray-400 mb-6 text-sm">3 hours private time, custom team building modes, and full facility access.</p>
-                        <a href="contact.html" class="text-purple-500 font-bold uppercase hover:text-white transition">Inquire Now <i class="fa-solid fa-arrow-right"></i></a>
+                    <div class="lg:w-1/2 reveal delay-200">
+                        <div class="relative group">
+                            <div class="absolute -inset-4 bg-neonBlue/20 blur-3xl opacity-0 group-hover:opacity-100 transition duration-1000"></div>
+                            <div class="glass-panel p-2 rounded-[2rem] border-neonBlue/30 overflow-hidden">
+                                <img src="../assets/images/safety_kit.png" alt="Tactical Gear" class="w-full h-auto rounded-[1.5rem] grayscale hover:grayscale-0 transition duration-700">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RICH CONTENT SECTION 2: Unlimited Action -->
+        <section class="py-24 bg-darkCard/30 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-neonGreen/5 blur-[120px] -z-10"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col-reverse lg:flex-row-reverse items-center gap-16">
+                    <div class="lg:w-1/2 reveal text-center lg:text-left">
+                        <div class="inline-block px-4 py-1 bg-neonGreen/10 text-neonGreen rounded-full text-xs font-bold uppercase tracking-widest mb-6">Ammo Logics</div>
+                        <h2 class="text-4xl md:text-5xl font-heading font-black text-white uppercase leading-tight mb-8">Unlimited <span class="text-neonGreen">Reloads</span></h2>
+                        <p class="text-gray-300 text-lg mb-8">Stop counting shots and start dominating the field. Unlike paintball or airsoft, we provide unlimited water-based Gellyballs for the entire duration of your pass.</p>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-8 justify-center lg:justify-start">
+                            <div class="glass-panel p-6 rounded-2xl border-neonGreen/10">
+                                <span class="text-3xl font-bold text-white block mb-1">0</span>
+                                <span class="text-xs text-gray-500 uppercase font-heading">Hidden Fees</span>
+                            </div>
+                            <div class="glass-panel p-6 rounded-2xl border-neonGreen/10">
+                                <span class="text-3xl font-bold text-white block mb-1">&infin;</span>
+                                <span class="text-xs text-gray-500 uppercase font-heading">Ammo Capacity</span>
+                            </div>
+                        </div>
+                        
+                        <a href="booking.html" class="inline-flex items-center gap-3 bg-neonGreen text-black px-8 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-green-400 transition transform hover:-translate-y-1">
+                            Lock In My Pass <i class="fa-solid fa-bolt"></i>
+                        </a>
+                    </div>
+                    <div class="lg:w-1/2 reveal delay-200">
+                        <div class="relative">
+                            <div class="glass-panel p-8 rounded-[3rem] border-white/5 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1544654803-b69140b285a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Action Shot" class="w-full h-[500px] object-cover rounded-[2rem]">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                                <div class="absolute bottom-16 left-16">
+                                    <div class="text-neonGreen text-6xl font-black mb-2 opacity-50">750+</div>
+                                    <div class="text-white font-heading uppercase tracking-widest">Rounds Per Minute</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RICH CONTENT SECTION 3: Membership Perks -->
+        <section class="py-24 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+                <div class="inline-block px-4 py-1 bg-purple-500/10 text-purple-500 rounded-full text-xs font-bold uppercase tracking-widest mb-6">Elite Status</div>
+                <h2 class="text-4xl md:text-5xl font-heading font-black text-white uppercase mb-4">The Vanguard <span class="text-purple-500">Elite</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">For the serious tactical gamer who lives for the arena.</p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-panel p-8 rounded-3xl border-t-4 border-purple-500 reveal text-center">
+                    <i class="fa-solid fa-infinity text-3xl text-purple-500 mb-6"></i>
+                    <h4 class="text-lg font-heading text-white uppercase mb-4">Unlimited Play</h4>
+                    <p class="text-sm text-gray-500">Access to any open-play session, any day of the week. No bookings required.</p>
+                </div>
+                <div class="glass-panel p-8 rounded-3xl border-t-4 border-purple-500 reveal delay-100 text-center">
+                    <i class="fa-solid fa-up-long text-3xl text-purple-500 mb-6"></i>
+                    <h4 class="text-lg font-heading text-white uppercase mb-4">Gear Upgrades</h4>
+                    <p class="text-sm text-gray-500">Complimentary access to Pro Blasters and tactical vests every time you visit.</p>
+                </div>
+                <div class="glass-panel p-8 rounded-3xl border-t-4 border-purple-500 reveal delay-200 text-center">
+                    <i class="fa-solid fa-gift text-3xl text-purple-500 mb-6"></i>
+                    <h4 class="text-lg font-heading text-white uppercase mb-4">Guest Passes</h4>
+                    <p class="text-sm text-gray-500">Bring a new recruit for free once per month. Grow your squad.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center reveal delay-300">
+                <a href="contact.html" class="text-white/60 hover:text-purple-500 transition font-bold uppercase tracking-widest text-sm">Inquire About Memberships <i class="fa-solid fa-chevron-right ml-2"></i></a>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Event Packages -->
+        <section class="py-24 bg-darkCard/50 border-y border-neonBlue/10 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl font-heading font-bold text-white uppercase tracking-widest">Squad <span class="text-neonGreen">Deployments</span></h2>
+                    <p class="text-gray-400">Exclusive arena access for your entire crew.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="relative group h-[400px] overflow-hidden rounded-[2.5rem] reveal">
+                        <img src="../assets/images/event_birthday.png" alt="Birthdays" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 w-full p-10">
+                            <div class="flex justify-between items-end">
+                                <div>
+                                    <h3 class="text-3xl font-heading text-white mb-2">Alpha Squad</h3>
+                                    <p class="text-gray-300 text-sm max-w-xs mb-4">The ultimate birthday mission with private room and ref.</p>
+                                    <a href="events.html" class="inline-flex items-center gap-2 text-neonGreen font-bold uppercase tracking-widest text-xs hover:gap-4 transition-all">
+                                        Mission Briefing <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-3xl font-heading text-neonGreen font-bold">$299</div>
+                                    <div class="text-[10px] text-gray-500 uppercase tracking-widest">10 Player Pass</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group h-[400px] overflow-hidden rounded-[2.5rem] reveal delay-100">
+                        <img src="../assets/images/event_corporate.png" alt="Corporate" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 w-full p-10">
+                            <div class="flex justify-between items-end">
+                                <div>
+                                    <h3 class="text-3xl font-heading text-white mb-2">Omega Elite</h3>
+                                    <p class="text-gray-300 text-sm max-w-xs mb-4">Corporate team building with custom tactical modes.</p>
+                                    <a href="events.html" class="inline-flex items-center gap-2 text-purple-500 font-bold uppercase tracking-widest text-xs hover:gap-4 transition-all">
+                                        Corporate Intel <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-3xl font-heading text-purple-500 font-bold">$499</div>
+                                    <div class="text-[10px] text-gray-500 uppercase tracking-widest">20 Player Pass</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -151,6 +318,67 @@
         </section>
     </main>
 
-    <footer class="bg-black border-t border-gray-800 py-8 text-center text-sm text-gray-500"><p>&copy; 2026 Gellyball Arena.</p></footer>
+    <!-- Footer (Not counted as a section) -->
+    <footer class="bg-black border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <a href="../index.html" class="font-heading text-2xl font-bold text-white flex items-center gap-2 mb-6">
+                        <i class="fa-solid fa-crosshairs text-neonGreen"></i>
+                        GELLY<span class="text-neonGreen">BALL</span>
+                    </a>
+                    <p class="text-gray-400 text-sm mb-6">The premier low-impact tactical gaming arena. Safe, mess-free fun for all ages.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded bg-gray-900 flex items-center justify-center text-gray-400 hover:text-neonGreen hover:bg-gray-800 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded bg-gray-900 flex items-center justify-center text-gray-400 hover:text-neonBlue hover:bg-gray-800 transition"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded bg-gray-900 flex items-center justify-center text-gray-400 hover:text-pink-500 hover:bg-gray-800 transition"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-heading font-semibold mb-6 uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="../index.html" class="hover:text-neonGreen transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-neonGreen transition">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-neonGreen transition">Our Services</a></li>
+                        <li><a href="events.html" class="hover:text-neonGreen transition">Birthdays & Events</a></li>
+                        <li><a href="pricing.html" class="hover:text-neonGreen transition">Pricing</a></li>
+                        <li><a href="contact.html" class="hover:text-neonGreen transition">Contact</a></li>
+                        <li>
+                            <a href="waiver.html" class="hover:text-neonGreen transition">Digital Waiver</a>
+                            <span class="block text-[10px] text-gray-600 uppercase font-bold mt-1 tracking-widest">Required for Play</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-heading font-semibold mb-6 uppercase tracking-wider">Contact Info</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-location-dot mt-1 text-neonGreen"></i> 123 Tactical Way, Gaming District, TX 75001</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-neonGreen"></i> (555) 123-4567</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-neonGreen"></i> hq@gellyballarena.com</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-heading font-semibold mb-6 uppercase tracking-wider">Newsletter</h4>
+                    <p class="text-gray-400 text-sm mb-4">Subscribe for special offers and tournament news.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Email Address" class="w-full bg-gray-900 border border-gray-700 text-white px-4 py-2 focus:outline-none focus:border-neonGreen rounded-l">
+                        <button type="submit" class="bg-neonGreen text-black px-4 py-2 font-bold hover:bg-green-400 transition rounded-r"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                <p>&copy; 2026 Gellyball Arena. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-gray-300 transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-gray-300 transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

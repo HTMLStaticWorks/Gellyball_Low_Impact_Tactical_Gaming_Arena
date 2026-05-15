@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Waiver | Gellyball Arena</title>
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { neonGreen: '#39ff14', neonBlue: '#00f3ff', darkBg: '#0b0f19', darkCard: '#111827' }, fontFamily: { sans: ['Inter', 'sans-serif'], heading: ['Orbitron', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="arena-bg antialiased selection:bg-neonGreen selection:text-black">
+
+    <!-- Streamlined Header -->
+    <header class="fixed w-full top-0 z-50 glass-panel border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 xl:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html" class="font-heading text-2xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-crosshairs text-neonGreen"></i>
+                        GELLY<span class="text-neonGreen">BALL</span>
+                    </a>
+                </div>
+                <div class="flex items-center gap-6">
+                    <button id="theme-toggle" class="text-gray-300 hover:text-neonGreen transition"><i class="fa-solid fa-moon"></i></button>
+                    <button id="rtl-toggle" class="text-gray-300 hover:text-neonGreen transition font-bold text-xs border border-gray-700 px-2 py-1 rounded">RTL</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-20">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="glass-panel p-8 md:p-12 rounded-3xl reveal border-neonGreen/20 shadow-2xl">
+                <div class="text-center mb-12">
+                    <i class="fa-solid fa-file-signature text-6xl text-neonGreen mb-6"></i>
+                    <h1 class="text-4xl md:text-5xl font-heading font-black text-white uppercase tracking-tighter mb-4">Digital <span class="text-neonGreen">Waiver</span></h1>
+                    <p class="text-gray-400">Please read and sign the following liability waiver before your mission.</p>
+                </div>
+
+                <div class="bg-black/50 rounded-xl p-6 h-64 overflow-y-auto mb-8 border border-gray-800 text-sm text-gray-400 leading-relaxed custom-scrollbar">
+                    <h3 class="text-white font-bold mb-4 uppercase">Liability Waiver & Release of Claims</h3>
+                    <p class="mb-4">1. I acknowledge that Gellyball involves physical activity and the use of low-impact blasters which carry inherent risks of minor injury.</p>
+                    <p class="mb-4">2. I assume full responsibility for any risks, injuries, or damages, known or unknown, which I might incur as a result of participating in the activities.</p>
+                    <p class="mb-4">3. I knowingly, voluntarily, and expressly waive any claim I may have against Gellyball Arena and its staff for any injury or damages that I may sustain as a result of participating.</p>
+                    <p class="mb-4">4. I agree to follow all safety rules and instructions provided by the arena staff. Failure to do so may result in immediate expulsion without refund.</p>
+                    <p class="mb-4">5. I consent to the use of any action photos or videos taken during the session for promotional purposes.</p>
+                </div>
+
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-500 text-[10px] font-bold uppercase tracking-widest mb-2">Participant Name</label>
+                            <input type="text" placeholder="Full Legal Name" class="w-full bg-gray-900 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neonGreen transition">
+                        </div>
+                        <div>
+                            <label class="block text-gray-500 text-[10px] font-bold uppercase tracking-widest mb-2">Email Address</label>
+                            <input type="email" placeholder="email@example.com" class="w-full bg-gray-900 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neonGreen transition">
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <input type="checkbox" id="agree" class="mt-1 accent-neonGreen">
+                        <label for="agree" class="text-sm text-gray-400">I have read the liability waiver and agree to the terms and conditions outlined above.</label>
+                    </div>
+                    <button type="submit" class="btn-primary w-full py-4">Sign & Validate Waiver</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Minimal Footer -->
+    <footer class="py-12 text-center text-xs text-gray-500 reveal">
+        <p>&copy; 2026 Gellyball Arena. All rights reserved.</p>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

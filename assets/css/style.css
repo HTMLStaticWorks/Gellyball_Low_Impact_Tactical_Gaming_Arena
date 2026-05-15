@@ -11,6 +11,13 @@
   --glass-border: rgba(57, 255, 20, 0.2);
 }
 
+header.glass-panel {
+  background: var(--dark-bg) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: 1px solid rgba(57, 255, 20, 0.1) !important;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -36,10 +43,165 @@ body {
 }
 body.light-mode {
   --dark-bg: #f8fafc;
-  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-bg: rgba(255, 255, 255, 0.9);
   --glass-border: rgba(0, 0, 0, 0.1);
   background-color: var(--dark-bg);
   color: #0f172a;
+}
+body.light-mode .text-white, 
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode a:not(.btn-primary):not(.text-neonGreen):not(.text-neonBlue),
+body.light-mode button:not(.btn-primary):not(.text-neonGreen):not(.text-neonBlue) {
+  color: #0f172a !important;
+}
+
+body.light-mode .text-neonGreen {
+  color: #16a34a !important; /* More legible green for light mode */
+}
+
+body.light-mode .text-neonBlue {
+  color: #0284c7 !important; /* More legible blue for light mode */
+}
+body.light-mode .text-gray-300,
+body.light-mode .text-gray-400,
+body.light-mode p {
+  color: #334155 !important;
+}
+body.light-mode .glass-panel {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+body.light-mode #mobile-menu a:not(.btn-primary):not(.text-neonGreen):not(.text-neonBlue),
+body.light-mode #mobile-menu button:not(.btn-primary):not(.text-neonGreen):not(.text-neonBlue) {
+  color: #0f172a !important;
+}
+/* Buttons */
+.btn-primary {
+  background: var(--neon-green) !important;
+  color: #000 !important;
+  border: 2px solid var(--neon-green);
+  padding: 0.75rem 2rem;
+  border-radius: 0.25rem;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background: #2ee610 !important; /* Slightly darker green on hover */
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Section & Hero Overrides */
+body.light-mode [class*="bg-gradient-to"]:not(.text-transparent),
+body.light-mode .bg-black\/80,
+body.light-mode .bg-black\/50 {
+  background: #f8fafc !important;
+  background-image: none !important;
+}
+body.light-mode .text-transparent.bg-clip-text {
+  background-image: linear-gradient(to right, #22c55e, #3b82f6) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+body.light-mode .bg-darkCard,
+body.light-mode .bg-darkCard\/80,
+body.light-mode .bg-darkCard\/50,
+body.light-mode .bg-gray-900 {
+  background-color: #f1f5f9 !important;
+}
+body.light-mode .text-shadow-lg {
+  text-shadow: none !important;
+}
+body.light-mode .mix-blend-overlay {
+  mix-blend-mode: multiply !important;
+  opacity: 0.1 !important;
+}
+body.light-mode section img {
+  opacity: 1 !important;
+}
+body.light-mode section img {
+  opacity: 1 !important;
+}
+body.light-mode .absolute.inset-0 img {
+  opacity: 0.3 !important;
+  filter: brightness(1.1) !important;
+}
+body.light-mode .from-darkBg,
+body.light-mode .via-darkBg\/90 {
+  --tw-gradient-from: #f8fafc !important;
+  --tw-gradient-stops: #f8fafc, rgba(248, 250, 252, 0.9), transparent !important;
+}
+/* Footer Overrides */
+body.light-mode footer {
+  background-color: #f8fafc !important;
+  border-top-color: #e2e8f0 !important;
+}
+body.light-mode footer .bg-gray-900 {
+  background-color: #ffffff !important;
+}
+body.light-mode footer .border-gray-800,
+body.light-mode footer .border-gray-700 {
+  border-color: #e2e8f0 !important;
+}
+body.light-mode footer a:not(.btn-primary) {
+  color: #475569 !important;
+}
+body.light-mode footer a:not(.btn-primary):hover {
+  color: var(--neon-green) !important;
+}
+body.light-mode footer input {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+body.light-mode .text-gray-500 {
+  color: #475569 !important;
+}
+body.light-mode .grayscale {
+  filter: none !important;
+}
+body.light-mode .bg-gradient-to-t.from-black\/80,
+body.light-mode .bg-gradient-to-t.from-black\/90,
+body.light-mode .bg-gradient-to-r.from-darkBg {
+  background: transparent !important;
+}
+body.light-mode .shadow-neon-green {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+body.light-mode .border-white {
+  border-color: #1e293b !important;
+}
+body.light-mode a[class*="hover:bg-white"]:hover,
+body.light-mode button[class*="hover:bg-white"]:hover {
+  background-color: #1e293b !important;
+  color: #ffffff !important;
+}
+body.light-mode a[class*="hover:bg-white/10"]:hover,
+body.light-mode button[class*="hover:bg-white/10"]:hover {
+  background-color: rgba(30, 41, 59, 0.1) !important;
+  color: #0f172a !important;
+}
+body.light-mode.arena-bg,
+body.light-mode .arena-bg {
+body.light-mode.arena-bg,
+body.light-mode .arena-bg {
+  background-image: none !important;
+  background-color: var(--dark-bg) !important;
+}
+body.light-mode.arena-bg::before,
+body.light-mode .arena-bg::before {
+  background-image: 
+    linear-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.05) 1px, transparent 1px) !important;
 }
 h1, h2, h3, h4, h5, h6, .font-heading {
   font-family: 'Orbitron', sans-serif;
@@ -83,36 +245,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 /* Buttons */
-.btn-primary {
-  background: transparent;
-  color: var(--neon-green);
-  border: 2px solid var(--neon-green);
-  padding: 0.75rem 2rem;
-  border-radius: 0.25rem;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-.btn-primary::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 0; height: 100%;
-  background: var(--neon-green);
-  transition: width 0.3s ease;
-  z-index: -1;
-}
-.btn-primary:hover::before {
-  width: 100%;
-}
-.btn-primary:hover {
-  color: var(--dark-bg);
-  box-shadow: 0 0 15px var(--neon-green);
-}
+/* btn-primary now defined above for global consistency */
 
 /* Grid & Layout Utilities */
 .arena-bg {

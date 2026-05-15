@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="../assets/images/favicon.png">
     <!-- Fonts & CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = { darkMode: 'class', theme: { extend: { colors: { neonGreen: '#39ff14', neonBlue: '#00f3ff', darkBg: '#0b0f19', darkCard: '#111827' }, fontFamily: { sans: ['Inter', 'sans-serif'], heading: ['Orbitron', 'sans-serif'] } } } }
@@ -17,12 +17,16 @@
 <body class="arena-bg antialiased selection:bg-neonGreen selection:text-black">
 
     <header class="fixed w-full top-0 z-50 glass-panel border-b-0 border-neonGreen/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 xl:px-8">
             <div class="flex justify-between items-center h-20">
-                <a href="../index.html" class="font-heading text-2xl font-bold text-white flex items-center gap-2">
-                    <i class="fa-solid fa-crosshairs text-neonGreen"></i> GELLY<span class="text-neonGreen">BALL</span>
-                </a>
-                <nav class="hidden md:flex space-x-8 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html" class="font-heading text-2xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-crosshairs text-neonGreen"></i>
+                        GELLY<span class="text-neonGreen">BALL</span>
+                    </a>
+                </div>
+                <!-- Desktop Menu (Links Centered) -->
+                <nav class="hidden lg:flex space-x-4 xl:space-x-8 items-center">
                     <div class="relative group">
                         <button class="flex items-center gap-1 text-gray-300 transition hover:text-neonGreen">
                             Home <i class="fa-solid fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
@@ -32,13 +36,22 @@
                             <a href="../index-2.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-neonGreen hover:bg-neonGreen/10 transition">Home 2</a>
                         </div>
                     </div>
+                    <a href="about.html" class="text-gray-300 transition hover:text-neonGreen">About</a>
+                    <a href="services.html" class="text-gray-300 transition hover:text-neonGreen">Services</a>
+                    <a href="events.html" class="text-gray-300 transition hover:text-neonGreen">Events</a>
+                    <a href="pricing.html" class="text-gray-300 transition hover:text-neonGreen">Pricing</a>
                     <a href="contact.html" class="text-neonGreen font-semibold transition hover:text-neonGreen">Contact</a>
-                    <button id="theme-toggle" class="text-gray-300 hover:text-neonGreen transition"><i class="fa-solid fa-moon"></i></button>
-                    <button id="rtl-toggle" class="text-gray-300 hover:text-neonGreen transition font-bold text-xs border border-gray-700 px-2 py-1 rounded ml-2">RTL</button>
                 </nav>
+
+                <!-- Action Items -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button id="theme-toggle" class="text-gray-300 hover:text-neonGreen transition"><i class="fa-solid fa-moon"></i></button>
+                    <button id="rtl-toggle" class="text-gray-300 hover:text-neonGreen transition font-bold text-xs border border-gray-700 px-2 py-1 rounded">RTL</button>
+                    <a href="booking.html" class="btn-primary text-sm px-4 py-2 ml-2">Book Now</a>
+                </div>
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center gap-4">
-                    <button class="text-gray-300 hover:text-neonGreen transition"><i class="fa-solid fa-moon"></i></button>
+                <div class="lg:hidden flex items-center gap-4">
+                    <button id="theme-toggle-mobile" class="text-gray-300 hover:text-neonGreen transition"><i class="fa-solid fa-moon"></i></button>
                     <button id="rtl-toggle-mobile" class="text-gray-300 hover:text-neonGreen transition font-bold text-xs border border-gray-700 px-2 py-1 rounded">RTL</button>
                     <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
@@ -47,18 +60,23 @@
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-gray-800">
+        <div id="mobile-menu" class="hidden lg:hidden glass-panel border-t border-gray-800">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <div class="space-y-1">
-                    <button class="flex items-center justify-between w-full px-3 py-2 text-gray-300 hover:text-neonGreen font-medium focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
-                        Home <i class="fa-solid fa-chevron-down text-xs transition-transform"></i>
+                    <button class="flex items-center justify-center gap-2 w-full px-3 py-2 text-gray-300 hover:text-neonGreen font-medium focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+                        Home <i class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
                     </button>
-                    <div class="hidden ml-4 space-y-1 border-l border-neonGreen/20">
+                    <div class="hidden space-y-1 text-center">
                         <a href="../index.html" class="block px-3 py-2 text-gray-400 hover:text-neonGreen text-sm">Home 1</a>
                         <a href="../index-2.html" class="block px-3 py-2 text-gray-400 hover:text-neonGreen text-sm">Home 2</a>
                     </div>
                 </div>
-                <a href="contact.html" class="block px-3 py-2 text-neonGreen font-medium">Contact</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen text-center">About</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen text-center">Services</a>
+                <a href="events.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen text-center">Events</a>
+                <a href="pricing.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen text-center">Pricing</a>
+                <a href="contact.html" class="block px-3 py-2 text-neonGreen font-medium text-center">Contact</a>
+                <a href="booking.html" class="btn-primary block text-center mt-4">Book Now</a>
             </div>
         </div>
     </header>
@@ -75,7 +93,7 @@
         <!-- SECTION 4: Contact Information (Moved up for better layout flow before form) -->
         <section class="py-12 relative z-20 -mt-10">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal delay-100">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="glass-panel p-6 rounded-xl text-center bg-gray-900 border border-gray-800">
                         <div class="w-12 h-12 mx-auto bg-neonGreen/10 text-neonGreen rounded-full flex items-center justify-center mb-4"><i class="fa-solid fa-location-dot text-xl"></i></div>
                         <h4 class="text-white font-bold mb-2">Location</h4>
@@ -86,10 +104,21 @@
                         <h4 class="text-white font-bold mb-2">Dispatch</h4>
                         <p class="text-sm text-gray-400">(555) 123-4567<br>Mon-Sun: 10AM - 10PM</p>
                     </div>
-                    <div class="glass-panel p-6 rounded-xl text-center bg-gray-900 border border-gray-800">
+                    <div class="glass-panel p-8 rounded-xl text-center bg-gray-900 border border-gray-800">
                         <div class="w-12 h-12 mx-auto bg-purple-500/10 text-purple-500 rounded-full flex items-center justify-center mb-4"><i class="fa-solid fa-envelope text-xl"></i></div>
                         <h4 class="text-white font-bold mb-2">Email HQ</h4>
                         <p class="text-sm text-gray-400">hq@gellyballarena.com<br>Support replies within 24h</p>
+                    </div>
+                </div>
+
+                <!-- Social Media Connection -->
+                <div class="mt-12 flex flex-col items-center reveal">
+                    <p class="text-xs text-gray-500 uppercase tracking-[0.3em] font-bold mb-6">Social Ops</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-14 h-14 rounded-2xl glass-panel border-gray-800 flex items-center justify-center text-gray-400 hover:text-neonGreen hover:border-neonGreen hover:-translate-y-1 transition-all text-xl"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-14 h-14 rounded-2xl glass-panel border-gray-800 flex items-center justify-center text-gray-400 hover:text-neonBlue hover:border-neonBlue hover:-translate-y-1 transition-all text-xl"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="w-14 h-14 rounded-2xl glass-panel border-gray-800 flex items-center justify-center text-gray-400 hover:text-pink-500 hover:border-pink-500 hover:-translate-y-1 transition-all text-xl"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-14 h-14 rounded-2xl glass-panel border-gray-800 flex items-center justify-center text-gray-400 hover:text-red-500 hover:border-red-500 hover:-translate-y-1 transition-all text-xl"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -104,7 +133,7 @@
                         <div class="glass-panel p-8 rounded-2xl">
                             <h3 class="text-2xl font-heading text-white uppercase mb-6">Send a Message</h3>
                             <form class="space-y-4">
-                                <div class="grid grid-cols-2 gap-4">
+                                <div class="grid grid-cols-1 gap-4">
                                     <div>
                                         <label class="block text-gray-400 text-xs mb-1">First Name</label>
                                         <input type="text" class="w-full bg-gray-900 border border-gray-700 rounded px-4 py-2 text-white focus:outline-none focus:border-neonGreen transition">
@@ -135,17 +164,37 @@
                         </div>
                     </div>
                     
-                    <!-- SECTION 3: Google Map Section -->
+                    <!-- SECTION 3: Tactical HQ Map Visualization -->
                     <div class="lg:w-1/2 reveal delay-100 h-full min-h-[400px]">
-                        <div class="w-full h-full glass-panel rounded-2xl overflow-hidden p-2">
-                            <!-- Placeholder for Google Map since iframes can cause issues without an API key, using a styled div with a map image -->
-                            <div class="w-full h-full min-h-[400px] bg-gray-900 rounded-xl relative overflow-hidden flex items-center justify-center">
-                                <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Map" class="absolute inset-0 w-full h-full object-cover opacity-30 grayscale mix-blend-luminosity">
-                                <div class="absolute inset-0 bg-neonGreen/5"></div>
-                                <div class="relative z-10 text-center">
-                                    <i class="fa-solid fa-location-crosshairs text-4xl text-neonGreen mb-2 animate-pulse"></i>
-                                    <div class="bg-black/80 px-4 py-2 rounded border border-neonGreen text-white font-heading text-sm">Gellyball Arena HQ</div>
+                        <div class="w-full h-full glass-panel rounded-3xl overflow-hidden p-2 border border-neonGreen/20 shadow-[0_0_50px_rgba(57,255,20,0.05)]">
+                            <div class="w-full h-full min-h-[450px] bg-black rounded-2xl relative overflow-hidden flex items-center justify-center">
+                                <!-- Tactical Map Background -->
+                                <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Tactical Grid" class="absolute inset-0 w-full h-full object-cover opacity-40 grayscale contrast-125">
+                                
+                                <!-- Scan Lines Overlay -->
+                                <div class="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[size:100%_4px,3px_100%] pointer-events-none"></div>
+                                
+                                <!-- Radar Pulse Circles -->
+                                <div class="absolute w-[300px] h-[300px] border border-neonGreen/10 rounded-full animate-ping opacity-20"></div>
+                                <div class="absolute w-[150px] h-[150px] border border-neonGreen/20 rounded-full animate-pulse opacity-30"></div>
+
+                                <!-- HQ Target Marker -->
+                                <div class="relative z-10 flex flex-col items-center">
+                                    <div class="relative mb-4">
+                                        <i class="fa-solid fa-crosshairs text-6xl text-neonGreen drop-shadow-[0_0_15px_rgba(57,255,20,0.8)]"></i>
+                                        <div class="absolute -inset-2 border-2 border-neonGreen/30 rounded-full animate-[spin_4s_linear_infinite]"></div>
+                                    </div>
+                                    <div class="bg-black/90 backdrop-blur-md px-8 py-3 rounded-lg border-2 border-neonGreen shadow-[0_0_20px_rgba(57,255,20,0.3)]">
+                                        <span class="text-white font-heading font-bold uppercase tracking-[0.2em] text-lg">Gellyball Arena HQ</span>
+                                    </div>
+                                    <div class="mt-4 text-[10px] text-neonGreen font-mono uppercase tracking-widest bg-black/60 px-2 py-1 rounded">COORD: 32.7767° N, 96.7970° W</div>
                                 </div>
+
+                                <!-- Corner Accents -->
+                                <div class="absolute top-6 left-6 w-8 h-8 border-t-2 border-l-2 border-neonGreen/40"></div>
+                                <div class="absolute top-6 right-6 w-8 h-8 border-t-2 border-r-2 border-neonGreen/40"></div>
+                                <div class="absolute bottom-6 left-6 w-8 h-8 border-b-2 border-l-2 border-neonGreen/40"></div>
+                                <div class="absolute bottom-6 right-6 w-8 h-8 border-b-2 border-r-2 border-neonGreen/40"></div>
                             </div>
                         </div>
                     </div>
@@ -154,6 +203,67 @@
         </section>
     </main>
 
-    <footer class="bg-black border-t border-gray-800 py-8 text-center text-sm text-gray-500"><p>&copy; 2026 Gellyball Arena.</p></footer>
+    <!-- Footer (Not counted as a section) -->
+    <footer class="bg-black border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <a href="../index.html" class="font-heading text-2xl font-bold text-white flex items-center gap-2 mb-6">
+                        <i class="fa-solid fa-crosshairs text-neonGreen"></i>
+                        GELLY<span class="text-neonGreen">BALL</span>
+                    </a>
+                    <p class="text-gray-400 text-sm mb-6">The premier low-impact tactical gaming arena. Safe, mess-free fun for all ages.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded bg-gray-900 flex items-center justify-center text-gray-400 hover:text-neonGreen hover:bg-gray-800 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded bg-gray-900 flex items-center justify-center text-gray-400 hover:text-neonBlue hover:bg-gray-800 transition"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded bg-gray-900 flex items-center justify-center text-gray-400 hover:text-pink-500 hover:bg-gray-800 transition"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-heading font-semibold mb-6 uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="../index.html" class="hover:text-neonGreen transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-neonGreen transition">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-neonGreen transition">Our Services</a></li>
+                        <li><a href="events.html" class="hover:text-neonGreen transition">Birthdays & Events</a></li>
+                        <li><a href="pricing.html" class="hover:text-neonGreen transition">Pricing</a></li>
+                        <li><a href="contact.html" class="hover:text-neonGreen transition">Contact</a></li>
+                        <li>
+                            <a href="waiver.html" class="hover:text-neonGreen transition">Digital Waiver</a>
+                            <span class="block text-[10px] text-gray-600 uppercase font-bold mt-1 tracking-widest">Required for Play</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-heading font-semibold mb-6 uppercase tracking-wider">Contact Info</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-location-dot mt-1 text-neonGreen"></i> 123 Tactical Way, Gaming District, TX 75001</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-neonGreen"></i> (555) 123-4567</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-neonGreen"></i> hq@gellyballarena.com</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-heading font-semibold mb-6 uppercase tracking-wider">Newsletter</h4>
+                    <p class="text-gray-400 text-sm mb-4">Subscribe for special offers and tournament news.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Email Address" class="w-full bg-gray-900 border border-gray-700 text-white px-4 py-2 focus:outline-none focus:border-neonGreen rounded-l">
+                        <button type="submit" class="bg-neonGreen text-black px-4 py-2 font-bold hover:bg-green-400 transition rounded-r"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                <p>&copy; 2026 Gellyball Arena. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-gray-300 transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-gray-300 transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

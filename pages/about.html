@@ -8,7 +8,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -24,12 +24,15 @@
 
     <!-- Header -->
     <header class="fixed w-full top-0 z-50 glass-panel border-b-0 border-neonGreen/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 xl:px-8">
             <div class="flex justify-between items-center h-20">
-                <a href="../index.html" class="font-heading text-2xl font-bold text-white flex items-center gap-2">
-                    <i class="fa-solid fa-crosshairs text-neonGreen"></i> GELLY<span class="text-neonGreen">BALL</span>
-                </a>
-                <nav class="hidden md:flex space-x-8 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="../index.html" class="font-heading text-2xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-crosshairs text-neonGreen"></i> GELLY<span class="text-neonGreen">BALL</span>
+                    </a>
+                </div>
+                <!-- Desktop Menu (Links Centered) -->
+                <nav class="hidden lg:flex space-x-4 xl:space-x-8 items-center">
                     <div class="relative group">
                         <button class="flex items-center gap-1 text-gray-300 transition hover:text-neonGreen">
                             Home <i class="fa-solid fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
@@ -41,14 +44,20 @@
                     </div>
                     <a href="about.html" class="text-neonGreen font-semibold transition hover:text-neonGreen">About</a>
                     <a href="services.html" class="text-gray-300 transition hover:text-neonGreen">Services</a>
+                    <a href="events.html" class="text-gray-300 transition hover:text-neonGreen">Events</a>
                     <a href="pricing.html" class="text-gray-300 transition hover:text-neonGreen">Pricing</a>
                     <a href="contact.html" class="text-gray-300 transition hover:text-neonGreen">Contact</a>
-                    <button id="theme-toggle" class="text-gray-300 hover:text-neonGreen transition"><i class="fa-solid fa-moon"></i></button>
-                    <button id="rtl-toggle" class="text-gray-300 hover:text-neonGreen transition font-bold text-xs border border-gray-700 px-2 py-1 rounded ml-2">RTL</button>
                 </nav>
+
+                <!-- Action Items -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button id="theme-toggle" class="text-gray-300 hover:text-neonGreen transition"><i class="fa-solid fa-moon"></i></button>
+                    <button id="rtl-toggle" class="text-gray-300 hover:text-neonGreen transition font-bold text-xs border border-gray-700 px-2 py-1 rounded">RTL</button>
+                    <a href="booking.html" class="btn-primary text-sm px-4 py-2 ml-2">Book Now</a>
+                </div>
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center gap-4">
-                    <button class="text-gray-300 hover:text-neonGreen transition"><i class="fa-solid fa-moon"></i></button>
+                <div class="lg:hidden flex items-center gap-4">
+                    <button id="theme-toggle-mobile" class="text-gray-300 hover:text-neonGreen transition"><i class="fa-solid fa-moon"></i></button>
                     <button id="rtl-toggle-mobile" class="text-gray-300 hover:text-neonGreen transition font-bold text-xs border border-gray-700 px-2 py-1 rounded">RTL</button>
                     <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
@@ -57,21 +66,23 @@
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-gray-800">
+        <div id="mobile-menu" class="hidden lg:hidden glass-panel border-t border-gray-800">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <div class="space-y-1">
-                    <button class="flex items-center justify-between w-full px-3 py-2 text-gray-300 hover:text-neonGreen font-medium focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
-                        Home <i class="fa-solid fa-chevron-down text-xs transition-transform"></i>
+                    <button class="flex items-center justify-center gap-2 w-full px-3 py-2 text-gray-300 hover:text-neonGreen font-medium focus:outline-none" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+                        Home <i class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
                     </button>
-                    <div class="hidden ml-4 space-y-1 border-l border-neonGreen/20">
+                    <div class="hidden space-y-1 text-center">
                         <a href="../index.html" class="block px-3 py-2 text-gray-400 hover:text-neonGreen text-sm">Home 1</a>
                         <a href="../index-2.html" class="block px-3 py-2 text-gray-400 hover:text-neonGreen text-sm">Home 2</a>
                     </div>
                 </div>
-                <a href="about.html" class="block px-3 py-2 text-neonGreen font-medium">About</a>
-                <a href="services.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen">Services</a>
-                <a href="pricing.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen">Pricing</a>
-                <a href="contact.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen">Contact</a>
+                <a href="about.html" class="block px-3 py-2 text-neonGreen font-medium text-center">About</a>
+                <a href="services.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen text-center">Services</a>
+                <a href="events.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen text-center">Events</a>
+                <a href="pricing.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen text-center">Pricing</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-300 hover:text-neonGreen text-center">Contact</a>
+                <a href="booking.html" class="btn-primary block text-center mt-4">Book Now</a>
             </div>
         </div>
     </header>
@@ -84,24 +95,27 @@
 
     <main class="relative-z">
         <!-- SECTION 1: Company Story -->
-        <section class="py-20 relative">
+        <section class="py-20 relative overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="md:w-1/2 reveal">
-                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Arena Story" class="rounded-xl shadow-neon-green grayscale hover:grayscale-0 transition duration-500">
+                        <div class="relative group">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-neonGreen to-neonBlue rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Arena Story" class="relative w-full h-72 md:h-[500px] object-cover rounded-xl shadow-2xl grayscale group-hover:grayscale-0 transition duration-500">
+                        </div>
                     </div>
-                    <div class="md:w-1/2 reveal delay-100">
+                    <div class="md:w-1/2 reveal delay-100 text-center md:text-left">
                         <h2 class="text-3xl font-heading font-bold text-white uppercase mb-6">Our <span class="text-neonGreen">Origins</span></h2>
-                        <p class="text-gray-400 mb-4">Founded in 2024 by tactical gaming enthusiasts, our arena was built with one goal: to provide the ultimate low-impact combat experience. We realized paintball was too painful for younger players, and laser tag lacked the visceral feel of a real projectile.</p>
-                        <p class="text-gray-400 mb-6">Enter Gellyball. We transformed an abandoned warehouse into a 20,000 sq ft neon-lit combat grid, complete with modular bunkers, sniper towers, and UV environments.</p>
-                        <div class="flex gap-8 border-t border-gray-800 pt-6">
-                            <div>
+                        <p class="text-gray-400 mb-4 leading-relaxed">Founded in 2024 by tactical gaming enthusiasts, our arena was built with one goal: to provide the ultimate low-impact combat experience. We realized paintball was too painful for younger players, and laser tag lacked the visceral feel of a real projectile.</p>
+                        <p class="text-gray-400 mb-6 leading-relaxed">Enter Gellyball. We transformed an abandoned warehouse into a 20,000 sq ft neon-lit combat grid, complete with modular bunkers, sniper towers, and UV environments. Every corner of our arena is designed to challenge your senses and test your tactical prowess.</p>
+                        <div class="flex justify-center md:justify-start gap-8 border-t border-gray-800 pt-6">
+                            <div class="text-center">
                                 <div class="text-3xl font-heading text-neonGreen font-bold counter" data-target="20000">0</div>
-                                <div class="text-sm text-gray-500 uppercase">Sq Ft Arena</div>
+                                <div class="text-xs text-gray-500 uppercase tracking-widest mt-1">Sq Ft Arena</div>
                             </div>
-                            <div>
+                            <div class="text-center">
                                 <div class="text-3xl font-heading text-neonGreen font-bold counter" data-target="50000">0</div>
-                                <div class="text-sm text-gray-500 uppercase">Players Hosted</div>
+                                <div class="text-xs text-gray-500 uppercase tracking-widest mt-1">Players Hosted</div>
                             </div>
                         </div>
                     </div>
@@ -109,74 +123,309 @@
             </div>
         </section>
 
-        <!-- SECTION 2: Mission & Vision -->
+        <!-- SECTION 2: Our Journey (Timeline) -->
+        <section class="py-20 relative bg-black/40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl font-heading font-bold text-white uppercase mb-4">Our <span class="text-neonGreen">Journey</span></h2>
+                    <p class="text-gray-400">The evolution of Gellyball Arena.</p>
+                </div>
+                
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-neonGreen via-neonBlue to-neonGreen opacity-20"></div>
+                    
+                    <div class="space-y-12">
+                        <!-- Milestone 1 -->
+                        <div class="flex flex-col md:flex-row items-center gap-8 reveal">
+                            <div class="md:w-1/2 md:text-right">
+                                <span class="text-neonGreen font-heading text-xl font-bold">2024 Q1</span>
+                                <h4 class="text-white text-xl font-bold mt-1">The Blueprint</h4>
+                                <p class="text-gray-400 mt-2">A group of airsoft and paintball veterans conceptualized a cleaner, safer, yet equally thrilling alternative.</p>
+                            </div>
+                            <div class="hidden md:flex w-12 h-12 rounded-full bg-darkBg border-2 border-neonGreen z-10 items-center justify-center">
+                                <div class="w-3 h-3 bg-neonGreen rounded-full animate-pulse"></div>
+                            </div>
+                            <div class="md:w-1/2">
+                                <img src="../assets/images/blueprint.png" alt="Blueprint" class="rounded-lg border border-gray-800 opacity-80">
+                            </div>
+                        </div>
+                        
+                        <!-- Milestone 2 -->
+                        <div class="flex flex-col md:flex-row-reverse items-center gap-8 reveal delay-100">
+                            <div class="md:w-1/2">
+                                <span class="text-neonBlue font-heading text-xl font-bold">2024 Q3</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Arena Alpha</h4>
+                                <p class="text-gray-400 mt-2">Our first 10,000 sq ft facility opened its doors for beta testing with local gaming squads.</p>
+                            </div>
+                            <div class="hidden md:flex w-12 h-12 rounded-full bg-darkBg border-2 border-neonBlue z-10 items-center justify-center">
+                                <div class="w-3 h-3 bg-neonBlue rounded-full"></div>
+                            </div>
+                            <div class="md:w-1/2 md:text-right">
+                                <img src="../assets/images/alpha_arena.png" alt="Alpha" class="rounded-lg border border-gray-800 opacity-80 ml-auto">
+                            </div>
+                        </div>
+
+                        <!-- Milestone 3 -->
+                        <div class="flex flex-col md:flex-row items-center gap-8 reveal delay-200">
+                            <div class="md:w-1/2 md:text-right">
+                                <span class="text-neonGreen font-heading text-xl font-bold">2025</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Full Expansion</h4>
+                                <p class="text-gray-400 mt-2">Doubled our capacity and introduced the "Neon Grid" UV-reactive environment and automated scoring.</p>
+                            </div>
+                            <div class="hidden md:flex w-12 h-12 rounded-full bg-darkBg border-2 border-neonGreen z-10 items-center justify-center">
+                                <div class="w-3 h-3 bg-neonGreen rounded-full"></div>
+                            </div>
+                            <div class="md:w-1/2">
+                                <img src="../assets/images/arena_action.png" alt="Expansion" class="rounded-lg border border-gray-800 shadow-neon-green/20 shadow-lg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Mission & Vision -->
         <section class="py-20 bg-darkCard/50 border-y border-neonGreen/10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div class="glass-panel p-10 rounded-2xl reveal border-l-4 border-neonGreen">
-                        <div class="w-16 h-16 bg-neonGreen/10 rounded-full flex items-center justify-center mb-6">
-                            <i class="fa-solid fa-bullseye text-3xl text-neonGreen"></i>
+                    <div class="glass-panel p-10 rounded-2xl reveal border-t-4 border-neonGreen text-center">
+                        <div class="h-24 w-24 mx-auto mb-6 rounded-lg overflow-hidden border border-neonGreen/20">
+                            <img src="../assets/images/blueprint.png" alt="Mission" class="w-full h-full object-cover">
                         </div>
-                        <h3 class="text-2xl font-heading text-white uppercase mb-4">Our Mission</h3>
-                        <p class="text-gray-400">To deliver heart-pounding, adrenaline-fueled entertainment in a safe, inclusive, and highly immersive environment. We strive to create unforgettable memories for players of all ages, fostering teamwork, communication, and sportsmanship.</p>
+                        <h3 class="text-2xl font-heading text-white uppercase mb-4 tracking-tighter">Our Mission</h3>
+                        <p class="text-gray-400 leading-relaxed">To deliver heart-pounding, adrenaline-fueled entertainment in a safe, inclusive, and highly immersive environment. We strive to create unforgettable memories for players of all ages, fostering teamwork, communication, and sportsmanship through every match.</p>
                     </div>
-                    <div class="glass-panel p-10 rounded-2xl reveal delay-100 border-l-4 border-neonBlue">
-                        <div class="w-16 h-16 bg-neonBlue/10 rounded-full flex items-center justify-center mb-6">
-                            <i class="fa-solid fa-eye text-3xl text-neonBlue"></i>
+                    <div class="glass-panel p-10 rounded-2xl reveal delay-100 border-t-4 border-neonBlue text-center">
+                        <div class="h-24 w-24 mx-auto mb-6 rounded-lg overflow-hidden border border-neonBlue/20">
+                            <img src="../assets/images/arena_fx.png" alt="Vision" class="w-full h-full object-cover">
                         </div>
-                        <h3 class="text-2xl font-heading text-white uppercase mb-4">Our Vision</h3>
-                        <p class="text-gray-400">To become the premier destination for tactical gaming entertainment nationwide, pioneering new technologies in the Gellyball industry and continually evolving our arenas to offer next-generation combat simulations.</p>
+                        <h3 class="text-2xl font-heading text-white uppercase mb-4 tracking-tighter">Our Vision</h3>
+                        <p class="text-gray-400 leading-relaxed">To become the premier destination for tactical gaming entertainment nationwide, pioneering new technologies in the Gellyball industry and continually evolving our arenas to offer next-generation combat simulations that blur the line between gaming and reality.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 3: Team Members -->
-        <section class="py-20 relative">
+        <!-- SECTION 4: Core Values -->
+        <section class="py-20 relative overflow-hidden">
+            <!-- Background Glows -->
+            <div class="absolute top-1/2 left-0 w-64 h-64 bg-neonGreen/5 blur-[120px] -z-10"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-neonBlue/5 blur-[150px] -z-10"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl font-heading font-bold text-white uppercase mb-4">Core <span class="text-neonGreen">Values</span></h2>
+                    <p class="text-gray-400">The pillars of our tactical community.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Value 1 -->
+                    <div class="glass-panel p-8 rounded-xl text-center hover-neon transition duration-300 reveal">
+                        <div class="h-24 w-24 mx-auto mb-4 rounded-lg overflow-hidden border border-neonGreen/20">
+                            <img src="../assets/images/safety_mask.png" alt="Safety" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-white font-heading text-sm font-bold uppercase mb-2">Safety First</h4>
+                        <p class="text-gray-500 text-xs">Non-toxic, low-impact, and fully supervised by veterans.</p>
+                    </div>
+                    <!-- Value 2 -->
+                    <div class="glass-panel p-8 rounded-xl text-center hover-neon transition duration-300 reveal delay-100">
+                        <div class="h-24 w-24 mx-auto mb-4 rounded-lg overflow-hidden border border-neonGreen/20">
+                            <img src="../assets/images/safety_blaster.png" alt="Innovation" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-white font-heading text-sm font-bold uppercase mb-2">Innovation</h4>
+                        <p class="text-gray-500 text-xs">Constantly upgrading our blasters and field technology.</p>
+                    </div>
+                    <!-- Value 3 -->
+                    <div class="glass-panel p-8 rounded-xl text-center hover-neon transition duration-300 reveal delay-200">
+                        <div class="h-24 w-24 mx-auto mb-4 rounded-lg overflow-hidden border border-neonGreen/20">
+                            <img src="../assets/images/event_corporate.png" alt="Inclusivity" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-white font-heading text-sm font-bold uppercase mb-2">Inclusivity</h4>
+                        <p class="text-gray-500 text-xs">A welcoming environment for all ages and skill levels.</p>
+                    </div>
+                    <!-- Value 4 -->
+                    <div class="glass-panel p-8 rounded-xl text-center hover-neon transition duration-300 reveal delay-300">
+                        <div class="h-24 w-24 mx-auto mb-4 rounded-lg overflow-hidden border border-neonGreen/20">
+                            <img src="../assets/images/arena_action.png" alt="Adrenaline" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-white font-heading text-sm font-bold uppercase mb-2">Adrenaline</h4>
+                        <p class="text-gray-500 text-xs">Maximizing the thrill with immersive sound and light.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Team Members -->
+        <section class="py-20 relative bg-black/20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16 reveal">
                     <h2 class="text-3xl font-heading font-bold text-white uppercase mb-4">Command <span class="text-neonGreen">Staff</span></h2>
-                    <p class="text-gray-400 max-w-2xl mx-auto">Meet the veterans who keep the arena running and ensure your safety.</p>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Meet the veterans who keep the arena running and ensure your safety through tactical excellence.</p>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Member 1 -->
-                    <div class="reveal">
-                        <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-2 border-neonGreen mb-4 p-1">
-                            <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition duration-300">
+                    <div class="reveal group text-center">
+                        <div class="relative mb-6 mx-auto w-48 h-48">
+                            <div class="absolute -inset-2 bg-gradient-to-tr from-neonGreen to-transparent rounded-full opacity-20 group-hover:opacity-100 transition duration-500 blur-md"></div>
+                            <div class="relative w-48 h-48 rounded-full overflow-hidden border-2 border-neonGreen p-1 bg-darkBg">
+                                <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition duration-500 scale-110 group-hover:scale-100">
+                            </div>
                         </div>
                         <h4 class="text-lg font-heading text-white">Marcus "Zero" Kane</h4>
-                        <p class="text-sm text-neonGreen mb-2">Arena Director</p>
+                        <p class="text-sm text-neonGreen mb-3 font-semibold tracking-wider">Arena Director</p>
+                        <div class="flex justify-center gap-4 text-gray-500">
+                            <a href="#" class="hover:text-neonGreen transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" class="hover:text-neonGreen transition"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
                     </div>
                     <!-- Member 2 -->
-                    <div class="reveal delay-100">
-                        <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-2 border-gray-700 mb-4 p-1">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition duration-300">
+                    <div class="reveal delay-100 group text-center">
+                        <div class="relative mb-6 mx-auto w-48 h-48">
+                            <div class="absolute -inset-2 bg-gradient-to-tr from-neonBlue to-transparent rounded-full opacity-0 group-hover:opacity-40 transition duration-500 blur-md"></div>
+                            <div class="relative w-48 h-48 rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-neonBlue p-1 bg-darkBg transition-colors">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition duration-500 scale-110 group-hover:scale-100">
+                            </div>
                         </div>
                         <h4 class="text-lg font-heading text-white">Sarah "Ghost" Vance</h4>
-                        <p class="text-sm text-gray-400 mb-2">Head Referee</p>
+                        <p class="text-sm text-gray-400 group-hover:text-neonBlue mb-3 font-semibold tracking-wider transition-colors">Head Referee</p>
+                        <div class="flex justify-center gap-4 text-gray-500">
+                            <a href="#" class="hover:text-neonBlue transition"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="hover:text-neonBlue transition"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="hover:text-neonBlue transition"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
                     </div>
                     <!-- Member 3 -->
-                    <div class="reveal delay-200">
-                        <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-2 border-gray-700 mb-4 p-1">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition duration-300">
+                    <div class="reveal delay-200 group text-center">
+                        <div class="relative mb-6 mx-auto w-48 h-48">
+                            <div class="absolute -inset-2 bg-gradient-to-tr from-neonGreen to-transparent rounded-full opacity-0 group-hover:opacity-40 transition duration-500 blur-md"></div>
+                            <div class="relative w-48 h-48 rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-neonGreen p-1 bg-darkBg transition-colors">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition duration-500 scale-110 group-hover:scale-100">
+                            </div>
                         </div>
                         <h4 class="text-lg font-heading text-white">David "Rook" Chen</h4>
-                        <p class="text-sm text-gray-400 mb-2">Armory Technician</p>
+                        <p class="text-sm text-gray-400 group-hover:text-neonGreen mb-3 font-semibold tracking-wider transition-colors">Armory Tech</p>
+                        <div class="flex justify-center gap-4 text-gray-500">
+                            <a href="#" class="hover:text-neonGreen transition"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" class="hover:text-neonGreen transition"><i class="fa-brands fa-discord"></i></a>
+                        </div>
                     </div>
                     <!-- Member 4 -->
-                    <div class="reveal delay-300">
-                        <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-2 border-gray-700 mb-4 p-1">
-                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition duration-300">
+                    <div class="reveal delay-300 group text-center">
+                        <div class="relative mb-6 mx-auto w-48 h-48">
+                            <div class="absolute -inset-2 bg-gradient-to-tr from-neonBlue to-transparent rounded-full opacity-0 group-hover:opacity-40 transition duration-500 blur-md"></div>
+                            <div class="relative w-48 h-48 rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-neonBlue p-1 bg-darkBg transition-colors">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition duration-500 scale-110 group-hover:scale-100">
+                            </div>
                         </div>
                         <h4 class="text-lg font-heading text-white">Elena "Viper" Rostova</h4>
-                        <p class="text-sm text-gray-400 mb-2">Event Coordinator</p>
+                        <p class="text-sm text-gray-400 group-hover:text-neonBlue mb-3 font-semibold tracking-wider transition-colors">Event Lead</p>
+                        <div class="flex justify-center gap-4 text-gray-500">
+                            <a href="#" class="hover:text-neonBlue transition"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" class="hover:text-neonBlue transition"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 4: Client Testimonials -->
+        <!-- SECTION 6: The Tactical Comparison -->
+        <section class="py-20 bg-darkCard border-y border-neonGreen/5">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl font-heading font-bold text-white uppercase mb-4">The <span class="text-neonGreen">Gellyball</span> Edge</h2>
+                    <p class="text-gray-400">How we stack up against traditional combat gaming.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-gray-800 rounded-3xl overflow-hidden reveal">
+                    <!-- Column 1: Paintball -->
+                    <div class="p-8 border-r border-gray-800 bg-black/20">
+                        <h4 class="text-xl font-heading text-gray-500 mb-6 text-center">Paintball</h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3 text-gray-500 text-sm"><i class="fa-solid fa-circle-xmark text-red-900 mt-1"></i> High Impact Pain</li>
+                            <li class="flex items-start gap-3 text-gray-500 text-sm"><i class="fa-solid fa-circle-xmark text-red-900 mt-1"></i> Messy Paint Residue</li>
+                            <li class="flex items-start gap-3 text-gray-500 text-sm"><i class="fa-solid fa-circle-xmark text-red-900 mt-1"></i> Age 12+ Recommended</li>
+                        </ul>
+                    </div>
+                    <!-- Column 2: Gellyball (The Winner) -->
+                    <div class="p-8 bg-neonGreen/5 border-x-2 border-neonGreen relative z-10 shadow-[0_0_40px_rgba(57,255,20,0.1)]">
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-neonGreen text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Recommended</div>
+                        <h4 class="text-2xl font-heading text-neonGreen mb-6 text-center">Gellyball</h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3 text-white text-sm"><i class="fa-solid fa-circle-check text-neonGreen mt-1 shadow-neon-green"></i> Zero Pain, All Thrill</li>
+                            <li class="flex items-start gap-3 text-white text-sm"><i class="fa-solid fa-circle-check text-neonGreen mt-1 shadow-neon-green"></i> 100% Biodegradable</li>
+                            <li class="flex items-start gap-3 text-white text-sm"><i class="fa-solid fa-circle-check text-neonGreen mt-1 shadow-neon-green"></i> Ages 5 to 95</li>
+                            <li class="flex items-start gap-3 text-white text-sm"><i class="fa-solid fa-circle-check text-neonGreen mt-1 shadow-neon-green"></i> High-Capacity Blasters</li>
+                        </ul>
+                    </div>
+                    <!-- Column 3: Laser Tag -->
+                    <div class="p-8 bg-black/20 border-l border-gray-800">
+                        <h4 class="text-xl font-heading text-gray-500 mb-6 text-center">Laser Tag</h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3 text-gray-500 text-sm"><i class="fa-solid fa-circle-minus text-gray-700 mt-1"></i> No Physical Projectile</li>
+                            <li class="flex items-start gap-3 text-gray-500 text-sm"><i class="fa-solid fa-circle-minus text-gray-700 mt-1"></i> Low "Weight" to Hits</li>
+                            <li class="flex items-start gap-3 text-gray-500 text-sm"><i class="fa-solid fa-circle-minus text-gray-700 mt-1"></i> Limited Tactical Feel</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: Equipment & Safety -->
+        <section class="py-20 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row-reverse items-center gap-16">
+                    <div class="md:w-1/2 reveal">
+                        <div class="relative">
+                            <div class="absolute -inset-4 bg-neonBlue/10 blur-3xl rounded-full"></div>
+                            <img src="../assets/images/blaster_close_up.png" alt="Equipment" class="relative w-full h-72 md:h-[500px] object-cover rounded-2xl border border-neonBlue/20 shadow-2xl">
+                            <!-- Stats Badges -->
+                            <div class="absolute -bottom-6 -left-6 glass-panel p-4 rounded-xl border-neonBlue/40 reveal delay-200">
+                                <div class="text-xs text-neonBlue font-bold uppercase mb-1">Muzzle Velocity</div>
+                                <div class="text-2xl font-heading text-white">150 FPS</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 reveal delay-100 text-center md:text-left">
+                        <h2 class="text-3xl font-heading font-bold text-white uppercase mb-6">The <span class="text-neonBlue">Armory</span></h2>
+                        <p class="text-gray-400 mb-8 leading-relaxed">We use the latest Gellyball™ technology. Our blasters are lightweight, easy to handle, and fire soft, water-based beads that burst on impact with zero mess.</p>
+                        
+                        <div class="space-y-6 flex flex-col items-start md:items-start w-fit mx-auto md:mx-0">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 shrink-0 bg-darkCard rounded-lg flex items-center justify-center border border-gray-800 text-neonGreen">
+                                    <i class="fa-solid fa-mask"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-white font-bold mb-1">Full-Face Protection</h5>
+                                    <p class="text-sm text-gray-500">Every player is equipped with a dual-lens fog-resistant tactical mask.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 shrink-0 bg-darkCard rounded-lg flex items-center justify-center border border-gray-800 text-neonGreen">
+                                    <i class="fa-solid fa-battery-full"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-white font-bold mb-1">High-Cap Hoppers</h5>
+                                    <p class="text-sm text-gray-500">750+ rounds per hopper means more action and less reloading.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 shrink-0 bg-darkCard rounded-lg flex items-center justify-center border border-gray-800 text-neonGreen">
+                                    <i class="fa-solid fa-leaf"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-white font-bold mb-1">Eco-Friendly Ammo</h5>
+                                    <p class="text-sm text-gray-500">Our Gellyballs are 100% biodegradable and non-toxic.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: Client Testimonials -->
         <section class="py-20 bg-darkCard/80 border-t border-neonGreen/10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16 reveal">
@@ -185,31 +434,144 @@
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <div class="glass-panel p-8 rounded-xl relative reveal">
+                    <div class="glass-panel p-8 rounded-xl relative reveal h-full flex flex-col">
                         <i class="fa-solid fa-quote-left text-4xl text-neonGreen/20 absolute top-4 left-4"></i>
                         <div class="flex text-neonGreen mb-4 relative z-10 pl-6">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         </div>
-                        <p class="text-gray-300 italic mb-6 relative z-10 pl-6">"The facility is absolutely incredible. The staff makes sure everyone is safe but still having the time of their lives."</p>
+                        <p class="text-gray-300 italic mb-6 relative z-10 pl-6 flex-grow">"The facility is absolutely incredible. The staff makes sure everyone is safe but still having the time of their lives."</p>
                         <h5 class="text-white font-bold pl-6">- The Martinez Family</h5>
                     </div>
-                    <div class="glass-panel p-8 rounded-xl relative reveal delay-100">
+                    <div class="glass-panel p-8 rounded-xl relative reveal delay-100 h-full flex flex-col">
                         <i class="fa-solid fa-quote-left text-4xl text-neonGreen/20 absolute top-4 left-4"></i>
                         <div class="flex text-neonGreen mb-4 relative z-10 pl-6">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         </div>
-                        <p class="text-gray-300 italic mb-6 relative z-10 pl-6">"Hosted our company retreat here. Way better than an escape room. The communication required to win brought our team closer."</p>
+                        <p class="text-gray-300 italic mb-6 relative z-10 pl-6 flex-grow">"Hosted our company retreat here. Way better than an escape room. The communication required to win brought our team closer."</p>
                         <h5 class="text-white font-bold pl-6">- TechCorp HR</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 9: Company FAQ -->
+        <section class="py-20 bg-black">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl font-heading font-bold text-white uppercase mb-4">Common <span class="text-neonGreen">Intel</span></h2>
+                    <p class="text-gray-400">Everything you need to know about our operations.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="glass-panel rounded-xl overflow-hidden reveal">
+                        <button class="w-full p-6 text-left flex justify-between items-center group" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+                            <span class="text-white font-bold">What makes Gellyball different from Paintball?</span>
+                            <i class="fa-solid fa-chevron-down text-neonGreen transition-transform"></i>
+                        </button>
+                        <div class="hidden p-6 pt-0 text-gray-400 border-t border-gray-800 bg-white/5">
+                            Gellyball uses much smaller, water-filled beads that burst on impact. This results in significantly less impact force (about 10% of paintball), meaning no bruises and much less pain, making it perfect for kids and adults alike.
+                        </div>
+                    </div>
+                    <div class="glass-panel rounded-xl overflow-hidden reveal delay-100">
+                        <button class="w-full p-6 text-left flex justify-between items-center group" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+                            <span class="text-white font-bold">Is the ammo environmentally safe?</span>
+                            <i class="fa-solid fa-chevron-down text-neonGreen transition-transform"></i>
+                        </button>
+                        <div class="hidden p-6 pt-0 text-gray-400 border-t border-gray-800 bg-white/5">
+                            Yes! Our Gellyballs are 100% biodegradable, non-toxic, and leave no residue. They are essentially small water balloons that disappear as they dry out.
+                        </div>
+                    </div>
+                    <div class="glass-panel rounded-xl overflow-hidden reveal delay-200">
+                        <button class="w-full p-6 text-left flex justify-between items-center group" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+                            <span class="text-white font-bold">Do you host private events?</span>
+                            <i class="fa-solid fa-chevron-down text-neonGreen transition-transform"></i>
+                        </button>
+                        <div class="hidden p-6 pt-0 text-gray-400 border-t border-gray-800 bg-white/5">
+                            Absolutely. We specialize in birthday parties, corporate team building, and bachelor/bachelorette parties. Contact our event lead Elena to customize your tactical experience.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 10: Call to Action -->
+        <section class="py-24 relative overflow-hidden">
+            <div class="absolute inset-0 bg-neonGreen/5"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+                <div class="reveal">
+                    <h2 class="text-4xl md:text-5xl font-heading font-black text-white uppercase mb-6 tracking-tight">Ready to join the <span class="text-neonGreen">Squad?</span></h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto mb-10 text-lg">Whether it's a birthday, team building, or just a weekend battle, we've got your slot ready. Lock and load!</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="pricing.html" class="bg-neonGreen text-black font-heading font-bold uppercase tracking-widest px-8 py-4 rounded hover:bg-white transition text-sm min-w-[200px] flex items-center justify-center">
+                            View Packages
+                        </a>
+                        <a href="contact.html" class="border border-white text-white font-heading font-bold uppercase tracking-widest px-8 py-4 rounded hover:bg-white/10 transition text-sm flex items-center justify-center gap-2 min-w-[200px]">
+                            Contact Intel <i class="fa-solid fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-black border-t border-gray-800 py-8">
-        <div class="max-w-7xl mx-auto text-center text-sm text-gray-500">
-            <p>&copy; 2026 Gellyball Arena. All rights reserved.</p>
+    <!-- Footer (Not counted as a section) -->
+    <footer class="bg-black border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <a href="../index.html" class="font-heading text-2xl font-bold text-white flex items-center gap-2 mb-6">
+                        <i class="fa-solid fa-crosshairs text-neonGreen"></i>
+                        GELLY<span class="text-neonGreen">BALL</span>
+                    </a>
+                    <p class="text-gray-400 text-sm mb-6">The premier low-impact tactical gaming arena. Safe, mess-free fun for all ages.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded bg-gray-900 flex items-center justify-center text-gray-400 hover:text-neonGreen hover:bg-gray-800 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded bg-gray-900 flex items-center justify-center text-gray-400 hover:text-neonBlue hover:bg-gray-800 transition"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded bg-gray-900 flex items-center justify-center text-gray-400 hover:text-pink-500 hover:bg-gray-800 transition"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-heading font-semibold mb-6 uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="../index.html" class="hover:text-neonGreen transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-neonGreen transition">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-neonGreen transition">Our Services</a></li>
+                        <li><a href="events.html" class="hover:text-neonGreen transition">Birthdays & Events</a></li>
+                        <li><a href="pricing.html" class="hover:text-neonGreen transition">Pricing</a></li>
+                        <li><a href="contact.html" class="hover:text-neonGreen transition">Contact</a></li>
+                        <li>
+                            <a href="waiver.html" class="hover:text-neonGreen transition">Digital Waiver</a>
+                            <span class="block text-[10px] text-gray-600 uppercase font-bold mt-1 tracking-widest">Required for Play</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-heading font-semibold mb-6 uppercase tracking-wider">Contact Info</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-location-dot mt-1 text-neonGreen"></i> 123 Tactical Way, Gaming District, TX 75001</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-neonGreen"></i> (555) 123-4567</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-neonGreen"></i> hq@gellyballarena.com</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-heading font-semibold mb-6 uppercase tracking-wider">Newsletter</h4>
+                    <p class="text-gray-400 text-sm mb-4">Subscribe for special offers and tournament news.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Email Address" class="w-full bg-gray-900 border border-gray-700 text-white px-4 py-2 focus:outline-none focus:border-neonGreen rounded-l">
+                        <button type="submit" class="bg-neonGreen text-black px-4 py-2 font-bold hover:bg-green-400 transition rounded-r"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                <p>&copy; 2026 Gellyball Arena. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-gray-300 transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-gray-300 transition">Terms of Service</a>
+                </div>
+            </div>
         </div>
     </footer>
 

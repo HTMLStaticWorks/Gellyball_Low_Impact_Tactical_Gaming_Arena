@@ -26,13 +26,12 @@ A premium, modern, responsive HTML5 website template designed for a "Gellyball &
 3.  **About Us** (`pages/about.html`) - 4 Sections
 4.  **Services** (`pages/services.html`) - 4 Sections
 5.  **Service Details** (`pages/service-details.html`) - 4 Sections
-6.  **Blog** (`pages/blog.html`) - 4 Sections
-7.  **Blog Details** (`pages/blog-details.html`) - 4 Sections
-8.  **Pricing** (`pages/pricing.html`) - 4 Sections
-9.  **Contact Us** (`pages/contact.html`) - 4 Sections
-10. **Booking** (`pages/booking.html`) - 4 Sections
-11. **404 Page** (`pages/404.html`) - 4 Sections
-12. **Coming Soon Page** (`pages/coming-soon.html`) - 4 Sections
+6.  **Birthdays & Events** (`pages/events.html`) - 6 Sections
+7.  **Pricing** (`pages/pricing.html`) - 4 Sections
+8.  **Contact Us** (`pages/contact.html`) - 4 Sections
+9.  **Booking** (`pages/booking.html`) - 4 Sections
+10. **404 Error Page** (`pages/404.html`) - 1 Section
+11. **Coming Soon** (`pages/coming-soon.html`) - 1 Sections
 
 ## File Structure
 
@@ -48,8 +47,7 @@ A premium, modern, responsive HTML5 website template designed for a "Gellyball &
 │   ├── about.html
 │   ├── services.html
 │   ├── service-details.html
-│   ├── blog.html
-│   ├── blog-details.html
+│   ├── events.html
 │   ├── pricing.html
 │   ├── contact.html
 │   ├── booking.html
