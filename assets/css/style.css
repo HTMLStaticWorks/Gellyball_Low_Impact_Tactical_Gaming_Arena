@@ -18,6 +18,14 @@ header.glass-panel {
   border-bottom: 1px solid rgba(57, 255, 20, 0.1) !important;
 }
 
+/* Ensure navigation dropdowns and mobile menu are solid, not transparent */
+header .glass-panel,
+#mobile-menu.glass-panel {
+  background: var(--dark-bg) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -53,8 +61,8 @@ body.light-mode h1,
 body.light-mode h2,
 body.light-mode h3,
 body.light-mode h4,
-body.light-mode a:not(.btn-primary):not(.text-neonGreen):not(.text-neonBlue),
-body.light-mode button:not(.btn-primary):not(.text-neonGreen):not(.text-neonBlue) {
+body.light-mode a:not(.btn-primary):not(.text-neonGreen):not(.text-neonBlue):not(.text-purple-500):not(:hover),
+body.light-mode button:not(.btn-primary):not(.text-neonGreen):not(.text-neonBlue):not(.text-purple-500):not(:hover) {
   color: #0f172a !important;
 }
 
@@ -65,13 +73,22 @@ body.light-mode .text-neonGreen {
 body.light-mode .text-neonBlue {
   color: #0284c7 !important; /* More legible blue for light mode */
 }
-body.light-mode .text-gray-300,
-body.light-mode .text-gray-400,
+body.light-mode .text-purple-500 {
+  color: #7e22ce !important; /* More legible purple for light mode */
+}
+body.light-mode .text-gray-300:not(:hover),
+body.light-mode .text-gray-400:not(:hover),
 body.light-mode p {
-  color: #334155 !important;
+  color: #0f172a !important;
 }
 body.light-mode .glass-panel {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+body.light-mode header.glass-panel {
+  background: #ffffff !important;
 }
 body.light-mode #mobile-menu a:not(.btn-primary):not(.text-neonGreen):not(.text-neonBlue),
 body.light-mode #mobile-menu button:not(.btn-primary):not(.text-neonGreen):not(.text-neonBlue) {
@@ -102,11 +119,14 @@ body.light-mode #mobile-menu button:not(.btn-primary):not(.text-neonGreen):not(.
 }
 
 /* Section & Hero Overrides */
-body.light-mode [class*="bg-gradient-to"]:not(.text-transparent),
-body.light-mode .bg-black\/80,
+body.light-mode [class*="bg-gradient-to"]:not(.text-transparent) {
+  background-image: linear-gradient(to right, rgba(248, 250, 252, 0.3), rgba(248, 250, 252, 0.1), transparent) !important;
+}
+body.light-mode .bg-black\/80 {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
 body.light-mode .bg-black\/50 {
-  background: #f8fafc !important;
-  background-image: none !important;
+  background: rgba(255, 255, 255, 0.05) !important;
 }
 body.light-mode .text-transparent.bg-clip-text {
   background-image: linear-gradient(to right, #22c55e, #3b82f6) !important;
@@ -116,6 +136,7 @@ body.light-mode .text-transparent.bg-clip-text {
 body.light-mode .bg-darkCard,
 body.light-mode .bg-darkCard\/80,
 body.light-mode .bg-darkCard\/50,
+body.light-mode .bg-darkCard\/30,
 body.light-mode .bg-gray-900 {
   background-color: #f1f5f9 !important;
 }
@@ -129,12 +150,25 @@ body.light-mode .mix-blend-overlay {
 body.light-mode section img {
   opacity: 1 !important;
 }
-body.light-mode section img {
-  opacity: 1 !important;
-}
 body.light-mode .absolute.inset-0 img {
-  opacity: 0.3 !important;
-  filter: brightness(1.1) !important;
+  opacity: 1 !important;
+  filter: brightness(1.1) contrast(0.9) !important;
+}
+/* Ensure hero text remains light over dark backgrounds even in light mode */
+body.light-mode section.h-\[80vh\] h1,
+body.light-mode section.h-\[80vh\] p,
+body.light-mode section.h-\[80vh\] span:not(.text-neonGreen):not(.text-neonBlue) {
+  color: #ffffff !important;
+}
+body.light-mode section.h-\[80vh\] .text-gray-300,
+body.light-mode section.h-\[80vh\] .text-gray-400 {
+  color: #cbd5e1 !important; /* Light gray for hero subtext */
+}
+body.light-mode section.h-\[80vh\] .text-neonBlue {
+  color: var(--neon-blue) !important;
+}
+body.light-mode section.h-\[80vh\] .text-neonGreen {
+  color: var(--neon-green) !important;
 }
 body.light-mode .from-darkBg,
 body.light-mode .via-darkBg\/90 {
@@ -155,9 +189,11 @@ body.light-mode footer .border-gray-700 {
 }
 body.light-mode footer a:not(.btn-primary) {
   color: #475569 !important;
+  transition: all 0.3s ease !important;
 }
 body.light-mode footer a:not(.btn-primary):hover {
-  color: var(--neon-green) !important;
+  color: #16a34a !important; /* Legible green for light mode */
+  padding-left: 5px; /* Subtle movement effect */
 }
 body.light-mode footer input {
   background-color: #ffffff !important;
@@ -166,6 +202,13 @@ body.light-mode footer input {
 body.light-mode .text-gray-500 {
   color: #475569 !important;
 }
+/* Social Icons Hover in Light Mode */
+body.light-mode a[class*="hover:text-neonGreen"]:hover { color: #16a34a !important; border-color: #16a34a !important; }
+body.light-mode a[class*="hover:text-neonBlue"]:hover { color: #0284c7 !important; border-color: #0284c7 !important; }
+body.light-mode a[class*="hover:text-pink-500"]:hover { color: #db2777 !important; border-color: #db2777 !important; }
+body.light-mode a[class*="hover:text-red-500"]:hover { color: #dc2626 !important; border-color: #dc2626 !important; }
+body.light-mode a[class*="hover:text-purple-500"]:hover { color: #9333ea !important; border-color: #9333ea !important; }
+
 body.light-mode .grayscale {
   filter: none !important;
 }
@@ -190,8 +233,54 @@ body.light-mode button[class*="hover:bg-white/10"]:hover {
   background-color: rgba(30, 41, 59, 0.1) !important;
   color: #0f172a !important;
 }
-body.light-mode.arena-bg,
-body.light-mode .arena-bg {
+/* Increase contrast for timeline and info sections in light mode */
+body.light-mode .bg-black\/20,
+body.light-mode .bg-black\/40 {
+  background-color: rgba(241, 245, 249, 0.3) !important;
+}
+body.light-mode .bg-black\/60,
+body.light-mode .bg-black\/80 {
+  background-color: rgba(15, 23, 42, 0.05) !important;
+}
+body.light-mode section[class*="bg-black/"] p {
+  color: #0f172a !important;
+}
+/* Ensure hardcoded black backgrounds adapt to light mode */
+body.light-mode .bg-black:not(footer) {
+  background-color: var(--dark-bg) !important;
+}
+/* Preserve light text on dark image cards in light mode */
+body.light-mode .light-text-card h3,
+body.light-mode .light-text-card p,
+body.light-mode .light-text-card .text-white,
+body.light-mode .light-text-card .text-gray-300 {
+  color: #ffffff !important;
+}
+body.light-mode .light-text-card.bg-black,
+body.light-mode .light-text-card .bg-black,
+body.light-mode .light-text-card .bg-black\/90,
+body.light-mode .light-text-card .bg-black\/60 {
+  background-color: #000000 !important;
+}
+body.light-mode .light-text-card .text-gray-500 {
+  color: #94a3b8 !important; /* Lighter gray for subtext on dark cards */
+}
+body.light-mode .light-text-card .text-neonGreen {
+  color: var(--neon-green) !important;
+}
+body.light-mode .light-text-card .text-neonBlue {
+  color: var(--neon-blue) !important;
+}
+body.light-mode .light-text-card .text-purple-500 {
+  color: #c084fc !important; /* Lighter purple for dark card visibility */
+}
+/* Special fix for neonBlue buttons to ensure text visibility on hover */
+/* Special fix for neonBlue buttons to ensure text visibility on hover */
+body.light-mode a.bg-neonBlue:hover,
+body.light-mode button.bg-neonBlue:hover {
+  background-color: #0ea5e9 !important;
+  color: #000000 !important;
+}
 body.light-mode.arena-bg,
 body.light-mode .arena-bg {
   background-image: none !important;
@@ -266,4 +355,94 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 .relative-z {
   position: relative;
   z-index: 10;
+}
+
+/* Scroll to Top Button */
+#scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--dark-bg);
+  border: 2px solid var(--neon-green);
+  color: var(--neon-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
+}
+
+#scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#scroll-top:hover {
+  background: var(--neon-green);
+  color: #000;
+  box-shadow: 0 0 25px rgba(57, 255, 20, 0.6);
+  transform: translateY(-5px);
+}
+
+body.light-mode #scroll-top {
+  background: #fff;
+  border-color: #16a34a;
+  color: #16a34a;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+body.light-mode #scroll-top:hover {
+  background: #16a34a;
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(22, 163, 74, 0.3);
+}
+
+/* Enhanced Footer Highlights */
+footer .flex.space-x-4 a {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+footer .flex.space-x-4 a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px currentColor;
+}
+
+footer ul li a {
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+footer ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--neon-green);
+  transition: width 0.3s ease;
+}
+
+footer ul li a:hover {
+  text-shadow: 0 0 8px rgba(57, 255, 20, 0.3);
+}
+
+footer ul li a:hover::after {
+  width: 100%;
+}
+
+body.light-mode footer ul li a::after {
+  background-color: #16a34a;
+}
+
+body.light-mode footer ul li a:hover {
+  text-shadow: none;
 }

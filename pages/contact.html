@@ -26,12 +26,12 @@
                     </a>
                 </div>
                 <!-- Desktop Menu (Links Centered) -->
-                <nav class="hidden lg:flex space-x-4 xl:space-x-8 items-center">
+                <nav class="hidden lg:flex gap-4 xl:gap-8 items-center">
                     <div class="relative group">
                         <button class="flex items-center gap-1 text-gray-300 transition hover:text-neonGreen">
                             Home <i class="fa-solid fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
                         </button>
-                        <div class="absolute left-0 mt-2 w-40 glass-panel opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60] border border-neonGreen/20 rounded-lg overflow-hidden">
+                        <div class="absolute ltr:left-0 rtl:right-0 mt-2 w-40 glass-panel opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60] border border-neonGreen/20 rounded-lg overflow-hidden">
                             <a href="../index.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-neonGreen hover:bg-neonGreen/10 transition">Home 1</a>
                             <a href="../index-2.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-neonGreen hover:bg-neonGreen/10 transition">Home 2</a>
                         </div>
@@ -40,14 +40,14 @@
                     <a href="services.html" class="text-gray-300 transition hover:text-neonGreen">Services</a>
                     <a href="events.html" class="text-gray-300 transition hover:text-neonGreen">Events</a>
                     <a href="pricing.html" class="text-gray-300 transition hover:text-neonGreen">Pricing</a>
-                    <a href="contact.html" class="text-neonGreen font-semibold transition hover:text-neonGreen">Contact</a>
+                    <a href="contact.html" class="text-neonGreen font-medium transition hover:text-neonGreen">Contact</a>
                 </nav>
 
                 <!-- Action Items -->
-                <div class="hidden lg:flex items-center space-x-4">
+                <div class="hidden lg:flex items-center gap-4">
                     <button id="theme-toggle" class="text-gray-300 hover:text-neonGreen transition"><i class="fa-solid fa-moon"></i></button>
                     <button id="rtl-toggle" class="text-gray-300 hover:text-neonGreen transition font-bold text-xs border border-gray-700 px-2 py-1 rounded">RTL</button>
-                    <a href="booking.html" class="btn-primary text-sm px-4 py-2 ml-2">Book Now</a>
+                    <a href="booking.html" class="btn-primary text-sm px-4 py-2 ltr:ml-2 rtl:mr-2">Book Now</a>
                 </div>
                 <!-- Mobile menu button -->
                 <div class="lg:hidden flex items-center gap-4">
@@ -167,7 +167,7 @@
                     <!-- SECTION 3: Tactical HQ Map Visualization -->
                     <div class="lg:w-1/2 reveal delay-100 h-full min-h-[400px]">
                         <div class="w-full h-full glass-panel rounded-3xl overflow-hidden p-2 border border-neonGreen/20 shadow-[0_0_50px_rgba(57,255,20,0.05)]">
-                            <div class="w-full h-full min-h-[450px] bg-black rounded-2xl relative overflow-hidden flex items-center justify-center">
+                            <div class="w-full h-full min-h-[450px] bg-black rounded-2xl relative overflow-hidden flex items-center justify-center light-text-card">
                                 <!-- Tactical Map Background -->
                                 <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Tactical Grid" class="absolute inset-0 w-full h-full object-cover opacity-40 grayscale contrast-125">
                                 
@@ -231,7 +231,6 @@
                         <li><a href="contact.html" class="hover:text-neonGreen transition">Contact</a></li>
                         <li>
                             <a href="waiver.html" class="hover:text-neonGreen transition">Digital Waiver</a>
-                            <span class="block text-[10px] text-gray-600 uppercase font-bold mt-1 tracking-widest">Required for Play</span>
                         </li>
                     </ul>
                 </div>
@@ -264,6 +263,10 @@
             </div>
         </div>
     </footer>
+    <button id="scroll-top" title="Go to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
     <script src="../assets/js/main.js"></script>
 </body>
 </html>

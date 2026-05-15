@@ -32,17 +32,17 @@
                     </a>
                 </div>
                 <!-- Desktop Menu (Links Centered) -->
-                <nav class="hidden lg:flex space-x-4 xl:space-x-8 items-center">
+                <nav class="hidden lg:flex gap-4 xl:gap-8 items-center">
                     <div class="relative group">
                         <button class="flex items-center gap-1 text-gray-300 transition hover:text-neonGreen">
                             Home <i class="fa-solid fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
                         </button>
-                        <div class="absolute left-0 mt-2 w-40 glass-panel opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60] border border-neonGreen/20 rounded-lg overflow-hidden">
+                        <div class="absolute ltr:left-0 rtl:right-0 mt-2 w-40 glass-panel opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60] border border-neonGreen/20 rounded-lg overflow-hidden">
                             <a href="../index.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-neonGreen hover:bg-neonGreen/10 transition">Home 1</a>
                             <a href="../index-2.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-neonGreen hover:bg-neonGreen/10 transition">Home 2</a>
                         </div>
                     </div>
-                    <a href="about.html" class="text-neonGreen font-semibold transition hover:text-neonGreen">About</a>
+                    <a href="about.html" class="text-neonGreen font-medium transition hover:text-neonGreen">About</a>
                     <a href="services.html" class="text-gray-300 transition hover:text-neonGreen">Services</a>
                     <a href="events.html" class="text-gray-300 transition hover:text-neonGreen">Events</a>
                     <a href="pricing.html" class="text-gray-300 transition hover:text-neonGreen">Pricing</a>
@@ -50,10 +50,10 @@
                 </nav>
 
                 <!-- Action Items -->
-                <div class="hidden lg:flex items-center space-x-4">
+                <div class="hidden lg:flex items-center gap-4">
                     <button id="theme-toggle" class="text-gray-300 hover:text-neonGreen transition"><i class="fa-solid fa-moon"></i></button>
                     <button id="rtl-toggle" class="text-gray-300 hover:text-neonGreen transition font-bold text-xs border border-gray-700 px-2 py-1 rounded">RTL</button>
-                    <a href="booking.html" class="btn-primary text-sm px-4 py-2 ml-2">Book Now</a>
+                    <a href="booking.html" class="btn-primary text-sm px-4 py-2 ltr:ml-2 rtl:mr-2">Book Now</a>
                 </div>
                 <!-- Mobile menu button -->
                 <div class="lg:hidden flex items-center gap-4">
@@ -268,9 +268,9 @@
                     <!-- Member 1 -->
                     <div class="reveal group text-center">
                         <div class="relative mb-6 mx-auto w-48 h-48">
-                            <div class="absolute -inset-2 bg-gradient-to-tr from-neonGreen to-transparent rounded-full opacity-20 group-hover:opacity-100 transition duration-500 blur-md"></div>
-                            <div class="relative w-48 h-48 rounded-full overflow-hidden border-2 border-neonGreen p-1 bg-darkBg">
-                                <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition duration-500 scale-110 group-hover:scale-100">
+                            <div class="absolute -inset-2 bg-gradient-to-tr from-neonGreen to-transparent rounded-[2rem] opacity-20 group-hover:opacity-100 transition duration-500 blur-md"></div>
+                            <div class="relative w-48 h-48 rounded-[2rem] overflow-hidden border-2 border-neonGreen p-1 bg-darkBg">
+                                <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="w-full h-full object-cover rounded-[1.8rem] grayscale group-hover:grayscale-0 transition duration-500 group-hover:scale-110">
                             </div>
                         </div>
                         <h4 class="text-lg font-heading text-white">Marcus "Zero" Kane</h4>
@@ -283,9 +283,9 @@
                     <!-- Member 2 -->
                     <div class="reveal delay-100 group text-center">
                         <div class="relative mb-6 mx-auto w-48 h-48">
-                            <div class="absolute -inset-2 bg-gradient-to-tr from-neonBlue to-transparent rounded-full opacity-0 group-hover:opacity-40 transition duration-500 blur-md"></div>
-                            <div class="relative w-48 h-48 rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-neonBlue p-1 bg-darkBg transition-colors">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition duration-500 scale-110 group-hover:scale-100">
+                            <div class="absolute -inset-2 bg-gradient-to-tr from-neonBlue to-transparent rounded-[2rem] opacity-0 group-hover:opacity-40 transition duration-500 blur-md"></div>
+                            <div class="relative w-48 h-48 rounded-[2rem] overflow-hidden border-2 border-gray-700 group-hover:border-neonBlue p-1 bg-darkBg transition-colors">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="w-full h-full object-cover rounded-[1.8rem] grayscale group-hover:grayscale-0 transition duration-500 group-hover:scale-110">
                             </div>
                         </div>
                         <h4 class="text-lg font-heading text-white">Sarah "Ghost" Vance</h4>
@@ -299,9 +299,9 @@
                     <!-- Member 3 -->
                     <div class="reveal delay-200 group text-center">
                         <div class="relative mb-6 mx-auto w-48 h-48">
-                            <div class="absolute -inset-2 bg-gradient-to-tr from-neonGreen to-transparent rounded-full opacity-0 group-hover:opacity-40 transition duration-500 blur-md"></div>
-                            <div class="relative w-48 h-48 rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-neonGreen p-1 bg-darkBg transition-colors">
-                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition duration-500 scale-110 group-hover:scale-100">
+                            <div class="absolute -inset-2 bg-gradient-to-tr from-neonGreen to-transparent rounded-[2rem] opacity-0 group-hover:opacity-40 transition duration-500 blur-md"></div>
+                            <div class="relative w-48 h-48 rounded-[2rem] overflow-hidden border-2 border-gray-700 group-hover:border-neonGreen p-1 bg-darkBg transition-colors">
+                                <img src="../assets/images/team_david.png" alt="Team" class="w-full h-full object-cover rounded-[1.8rem] grayscale group-hover:grayscale-0 transition duration-500 group-hover:scale-110">
                             </div>
                         </div>
                         <h4 class="text-lg font-heading text-white">David "Rook" Chen</h4>
@@ -314,9 +314,9 @@
                     <!-- Member 4 -->
                     <div class="reveal delay-300 group text-center">
                         <div class="relative mb-6 mx-auto w-48 h-48">
-                            <div class="absolute -inset-2 bg-gradient-to-tr from-neonBlue to-transparent rounded-full opacity-0 group-hover:opacity-40 transition duration-500 blur-md"></div>
-                            <div class="relative w-48 h-48 rounded-full overflow-hidden border-2 border-gray-700 group-hover:border-neonBlue p-1 bg-darkBg transition-colors">
-                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition duration-500 scale-110 group-hover:scale-100">
+                            <div class="absolute -inset-2 bg-gradient-to-tr from-neonBlue to-transparent rounded-[2rem] opacity-0 group-hover:opacity-40 transition duration-500 blur-md"></div>
+                            <div class="relative w-48 h-48 rounded-[2rem] overflow-hidden border-2 border-gray-700 group-hover:border-neonBlue p-1 bg-darkBg transition-colors">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team" class="w-full h-full object-cover rounded-[1.8rem] grayscale group-hover:grayscale-0 transition duration-500 group-hover:scale-110">
                             </div>
                         </div>
                         <h4 class="text-lg font-heading text-white">Elena "Viper" Rostova</h4>
@@ -463,7 +463,7 @@
                 </div>
 
                 <div class="space-y-4">
-                    <div class="glass-panel rounded-xl overflow-hidden reveal">
+                    <div class="glass-panel rounded-xl overflow-hidden reveal border border-neonGreen/20">
                         <button class="w-full p-6 text-left flex justify-between items-center group" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
                             <span class="text-white font-bold">What makes Gellyball different from Paintball?</span>
                             <i class="fa-solid fa-chevron-down text-neonGreen transition-transform"></i>
@@ -472,7 +472,7 @@
                             Gellyball uses much smaller, water-filled beads that burst on impact. This results in significantly less impact force (about 10% of paintball), meaning no bruises and much less pain, making it perfect for kids and adults alike.
                         </div>
                     </div>
-                    <div class="glass-panel rounded-xl overflow-hidden reveal delay-100">
+                    <div class="glass-panel rounded-xl overflow-hidden reveal delay-100 border border-neonGreen/20">
                         <button class="w-full p-6 text-left flex justify-between items-center group" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
                             <span class="text-white font-bold">Is the ammo environmentally safe?</span>
                             <i class="fa-solid fa-chevron-down text-neonGreen transition-transform"></i>
@@ -481,7 +481,7 @@
                             Yes! Our Gellyballs are 100% biodegradable, non-toxic, and leave no residue. They are essentially small water balloons that disappear as they dry out.
                         </div>
                     </div>
-                    <div class="glass-panel rounded-xl overflow-hidden reveal delay-200">
+                    <div class="glass-panel rounded-xl overflow-hidden reveal delay-200 border border-neonGreen/20">
                         <button class="w-full p-6 text-left flex justify-between items-center group" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
                             <span class="text-white font-bold">Do you host private events?</span>
                             <i class="fa-solid fa-chevron-down text-neonGreen transition-transform"></i>
@@ -541,7 +541,6 @@
                         <li><a href="contact.html" class="hover:text-neonGreen transition">Contact</a></li>
                         <li>
                             <a href="waiver.html" class="hover:text-neonGreen transition">Digital Waiver</a>
-                            <span class="block text-[10px] text-gray-600 uppercase font-bold mt-1 tracking-widest">Required for Play</span>
                         </li>
                     </ul>
                 </div>
@@ -574,6 +573,10 @@
             </div>
         </div>
     </footer>
+
+    <button id="scroll-top" title="Go to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <script src="../assets/js/main.js"></script>
 </body>

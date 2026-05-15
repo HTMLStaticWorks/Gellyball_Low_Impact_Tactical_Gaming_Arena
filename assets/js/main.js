@@ -142,4 +142,23 @@ document.addEventListener('DOMContentLoaded', () => {
   counters.forEach(counter => {
     startCounter.observe(counter);
   });
+  // 6. Scroll to Top Button Logic
+  const scrollTopBtn = document.getElementById('scroll-top');
+  
+  if (scrollTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) {
+        scrollTopBtn.classList.add('show');
+      } else {
+        scrollTopBtn.classList.remove('show');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 });
