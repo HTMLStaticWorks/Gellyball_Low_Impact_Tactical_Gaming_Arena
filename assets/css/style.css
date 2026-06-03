@@ -61,8 +61,8 @@ body.light-mode h1,
 body.light-mode h2,
 body.light-mode h3,
 body.light-mode h4,
-body.light-mode a:not(.btn-primary):not(.text-neonGreen):not(.text-neonBlue):not(.text-purple-500):not(:hover),
-body.light-mode button:not(.btn-primary):not(.text-neonGreen):not(.text-neonBlue):not(.text-purple-500):not(:hover) {
+body.light-mode a:not(.btn-primary):not(.text-neonGreen):not(.text-neonBlue):not(:hover),
+body.light-mode button:not(.btn-primary):not(.text-neonGreen):not(.text-neonBlue):not(:hover) {
   color: #0f172a !important;
 }
 
@@ -73,9 +73,7 @@ body.light-mode .text-neonGreen {
 body.light-mode .text-neonBlue {
   color: #0284c7 !important; /* More legible blue for light mode */
 }
-body.light-mode .text-purple-500 {
-  color: #7e22ce !important; /* More legible purple for light mode */
-}
+
 body.light-mode .text-gray-300:not(:hover),
 body.light-mode .text-gray-400:not(:hover),
 body.light-mode p {
@@ -119,13 +117,13 @@ body.light-mode #mobile-menu button:not(.btn-primary):not(.text-neonGreen):not(.
 }
 
 /* Section & Hero Overrides */
-body.light-mode [class*="bg-gradient-to"]:not(.text-transparent) {
+body.light-mode [class*="bg-gradient-to"]:not(.text-transparent):not(.dark-hero *):not(.light-text-card *) {
   background-image: linear-gradient(to right, rgba(248, 250, 252, 0.3), rgba(248, 250, 252, 0.1), transparent) !important;
 }
-body.light-mode .bg-black\/80 {
+body.light-mode .bg-black\/80:not(.dark-hero *):not(.light-text-card *) {
   background: rgba(255, 255, 255, 0.1) !important;
 }
-body.light-mode .bg-black\/50 {
+body.light-mode .bg-black\/50:not(.dark-hero *):not(.light-text-card *) {
   background: rgba(255, 255, 255, 0.05) !important;
 }
 body.light-mode .text-transparent.bg-clip-text {
@@ -156,24 +154,48 @@ body.light-mode .absolute.inset-0 img {
 }
 /* Ensure hero text remains light over dark backgrounds even in light mode */
 body.light-mode section.h-\[80vh\] h1,
+body.light-mode section.min-h-\[90vh\] h1,
+body.light-mode .dark-hero h1,
+body.light-mode .dark-hero h2,
 body.light-mode section.h-\[80vh\] p,
-body.light-mode section.h-\[80vh\] span:not(.text-neonGreen):not(.text-neonBlue) {
+body.light-mode section.min-h-\[90vh\] p,
+body.light-mode .dark-hero p,
+body.light-mode section.h-\[80vh\] span:not(.text-neonGreen):not(.text-neonBlue):not(.text-transparent),
+body.light-mode section.min-h-\[90vh\] span:not(.text-neonGreen):not(.text-neonBlue):not(.text-transparent),
+body.light-mode .dark-hero span:not(.text-neonGreen):not(.text-neonBlue):not(.text-transparent),
+body.light-mode .dark-hero a.text-white,
+body.light-mode .dark-hero a.text-white:not(.btn-primary):not(.text-neonGreen):not(.text-neonBlue):not(:hover) {
   color: #ffffff !important;
 }
 body.light-mode section.h-\[80vh\] .text-gray-300,
-body.light-mode section.h-\[80vh\] .text-gray-400 {
-  color: #cbd5e1 !important; /* Light gray for hero subtext */
+body.light-mode section.min-h-\[90vh\] .text-gray-300,
+body.light-mode .dark-hero .text-gray-300,
+body.light-mode section.h-\[80vh\] .text-gray-400,
+body.light-mode section.min-h-\[90vh\] .text-gray-400,
+body.light-mode .dark-hero .text-gray-400 {
+  color: #ffffff !important; /* White for hero subtext */
 }
-body.light-mode section.h-\[80vh\] .text-neonBlue {
+body.light-mode section.h-\[80vh\] .text-neonBlue,
+body.light-mode section.min-h-\[90vh\] .text-neonBlue,
+body.light-mode .dark-hero .text-neonBlue {
   color: var(--neon-blue) !important;
 }
-body.light-mode section.h-\[80vh\] .text-neonGreen {
+body.light-mode section.h-\[80vh\] .text-neonGreen,
+body.light-mode section.min-h-\[90vh\] .text-neonGreen,
+body.light-mode .dark-hero .text-neonGreen {
   color: var(--neon-green) !important;
 }
-body.light-mode .from-darkBg,
-body.light-mode .via-darkBg\/90 {
+body.light-mode .from-darkBg:not(.dark-hero *),
+body.light-mode .via-darkBg\/90:not(.dark-hero *) {
   --tw-gradient-from: #f8fafc !important;
   --tw-gradient-stops: #f8fafc, rgba(248, 250, 252, 0.9), transparent !important;
+}
+body.light-mode .dark-hero .from-darkBg {
+  --tw-gradient-from: #0b0f19 !important;
+  --tw-gradient-stops: #0b0f19, transparent !important;
+}
+body.light-mode .dark-hero .via-darkBg\/90 {
+  --tw-gradient-stops: var(--tw-gradient-from), rgba(11, 15, 25, 0.9), var(--tw-gradient-to, transparent) !important;
 }
 /* Footer Overrides */
 body.light-mode footer {
@@ -205,31 +227,39 @@ body.light-mode .text-gray-500 {
 /* Social Icons Hover in Light Mode */
 body.light-mode a[class*="hover:text-neonGreen"]:hover { color: #16a34a !important; border-color: #16a34a !important; }
 body.light-mode a[class*="hover:text-neonBlue"]:hover { color: #0284c7 !important; border-color: #0284c7 !important; }
-body.light-mode a[class*="hover:text-pink-500"]:hover { color: #db2777 !important; border-color: #db2777 !important; }
-body.light-mode a[class*="hover:text-red-500"]:hover { color: #dc2626 !important; border-color: #dc2626 !important; }
-body.light-mode a[class*="hover:text-purple-500"]:hover { color: #9333ea !important; border-color: #9333ea !important; }
 
 body.light-mode .grayscale {
   filter: none !important;
 }
-body.light-mode .bg-gradient-to-t.from-black\/80,
-body.light-mode .bg-gradient-to-t.from-black\/90,
-body.light-mode .bg-gradient-to-r.from-darkBg {
+body.light-mode .bg-gradient-to-t.from-black\/80:not(.dark-hero *):not(.light-text-card *),
+body.light-mode .bg-gradient-to-t.from-black\/90:not(.dark-hero *):not(.light-text-card *),
+body.light-mode .bg-gradient-to-r.from-darkBg:not(.dark-hero *):not(.light-text-card *) {
   background: transparent !important;
+}
+body.light-mode .dark-hero .bg-black\/80 {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+body.light-mode .dark-hero .bg-black\/50 {
+  background-color: rgba(0, 0, 0, 0.5) !important;
 }
 body.light-mode .shadow-neon-green {
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
-body.light-mode .border-white {
+body.light-mode .border-white:not(.dark-hero *) {
   border-color: #1e293b !important;
 }
-body.light-mode a[class*="hover:bg-white"]:hover,
-body.light-mode button[class*="hover:bg-white"]:hover {
+body.light-mode .dark-hero .border-white,
+body.light-mode .dark-hero a.border-white,
+body.light-mode .dark-hero a.border-white:not(.btn-primary):not(.text-neonGreen):not(.text-neonBlue):not(:hover) {
+  border-color: #ffffff !important;
+}
+body.light-mode a[class*="hover:bg-white"]:not(.dark-hero *):hover,
+body.light-mode button[class*="hover:bg-white"]:not(.dark-hero *):hover {
   background-color: #1e293b !important;
   color: #ffffff !important;
 }
-body.light-mode a[class*="hover:bg-white/10"]:hover,
-body.light-mode button[class*="hover:bg-white/10"]:hover {
+body.light-mode a[class*="hover:bg-white/10"]:not(.dark-hero *):hover,
+body.light-mode button[class*="hover:bg-white/10"]:not(.dark-hero *):hover {
   background-color: rgba(30, 41, 59, 0.1) !important;
   color: #0f172a !important;
 }
@@ -271,7 +301,7 @@ body.light-mode .light-text-card .text-neonGreen {
 body.light-mode .light-text-card .text-neonBlue {
   color: var(--neon-blue) !important;
 }
-body.light-mode .light-text-card .text-purple-500 {
+body.light-mode .light-text-card .text-neonBlue {
   color: #c084fc !important; /* Lighter purple for dark card visibility */
 }
 /* Special fix for neonBlue buttons to ensure text visibility on hover */
