@@ -74,8 +74,8 @@ body.light-mode .text-neonBlue {
   color: #0284c7 !important; /* More legible blue for light mode */
 }
 
-body.light-mode .text-gray-300:not(:hover),
-body.light-mode .text-gray-400:not(:hover),
+body.light-mode .text-gray-300,
+body.light-mode .text-gray-400,
 body.light-mode p {
   color: #0f172a !important;
 }
@@ -91,6 +91,15 @@ body.light-mode header.glass-panel {
 body.light-mode #mobile-menu a:not(.btn-primary):not(.text-neonGreen):not(.text-neonBlue),
 body.light-mode #mobile-menu button:not(.btn-primary):not(.text-neonGreen):not(.text-neonBlue) {
   color: #0f172a !important;
+}
+
+body.light-mode .contact-team-btn {
+  border-color: rgba(15, 23, 42, 0.3) !important;
+  color: #0f172a !important;
+}
+body.light-mode .contact-team-btn:hover {
+  background-color: rgba(15, 23, 42, 0.05) !important;
+  border-color: rgba(15, 23, 42, 0.5) !important;
 }
 /* Buttons */
 .btn-primary {
@@ -475,4 +484,99 @@ body.light-mode footer ul li a::after {
 
 body.light-mode footer ul li a:hover {
   text-shadow: none;
+}
+
+/* =============================================
+   RTL Fix: "The Grid" section in index-2.html
+   Center text, list & button at lg (1024px+)
+   ============================================= */
+[dir="rtl"] .grid-section-text {
+  text-align: center !important;
+}
+
+@media (min-width: 1024px) {
+  [dir="rtl"] .grid-section-text {
+    text-align: center !important;
+  }
+
+  [dir="rtl"] .grid-section-text ul {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    align-items: center !important;
+  }
+
+  [dir="rtl"] .grid-section-text > a {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+}
+
+/* =============================================
+   RTL Fix: Arena Features list in index.html
+   Ensure all 3 rows align consistently
+   ============================================= */
+[dir="rtl"] .arena-features-list .flex {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .arena-features-list h4,
+[dir="rtl"] .arena-features-list p {
+  text-align: right;
+}
+
+/* =============================================
+   RTL Fix: Footer bottom links spacing
+   space-x-4 uses margin-left which breaks in RTL
+   ============================================= */
+[dir="rtl"] footer .flex.space-x-4 {
+  gap: 1rem;
+}
+
+[dir="rtl"] footer .flex.space-x-4 > * + * {
+  margin-left: 0 !important;
+}
+
+/* =============================================
+   RTL Fix: Armory features list in about.html
+   Ensure all 3 rows align consistently
+   ============================================= */
+[dir="rtl"] .armory-features-list .flex {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .armory-features-list h5,
+[dir="rtl"] .armory-features-list p {
+  text-align: right;
+}
+
+/* =============================================
+   RTL Fix: Service & Event cards
+   Center text, list & button at lg (1024px+)
+   ============================================= */
+@media (min-width: 1024px) {
+  [dir="rtl"] .service-card-text,
+  [dir="rtl"] .event-card-text {
+    text-align: center !important;
+  }
+
+  [dir="rtl"] .service-card-text > div.w-20,
+  [dir="rtl"] .event-card-text > div.w-20 {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  [dir="rtl"] .service-card-text ul,
+  [dir="rtl"] .event-card-text ul {
+    width: 100% !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  [dir="rtl"] .service-card-text > a,
+  [dir="rtl"] .event-card-text > a {
+    display: flex !important;
+    justify-content: center !important;
+  }
 }

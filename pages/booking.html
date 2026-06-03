@@ -40,7 +40,7 @@
                     </a>
                 </div>
                 <div class="flex items-center gap-6">
-                    <button id="theme-toggle" class="text-gray-300 hover:text-neonGreen transition"><i class="fa-solid fa-moon"></i></button>
+                    <button id="theme-toggle" class="text-gray-300 hover:text-neonGreen transition border-x border-black px-2"><i class="fa-solid fa-moon"></i></button>
                     <button id="rtl-toggle" class="text-gray-300 hover:text-neonGreen transition font-bold text-xs border border-gray-700 px-2 py-1 rounded">RTL</button>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 reveal delay-200">
                     <a href="#packages" class="btn-primary w-full sm:w-auto px-8 py-4 text-lg text-center">Start Booking</a>
-                    <a href="#why-us" class="px-8 py-4 w-full sm:w-auto rounded border border-gray-700 text-white hover:border-neonBlue hover:text-neonBlue transition uppercase font-heading tracking-widest text-sm text-center">Why Us?</a>
+                    <a href="#why-us" class="px-8 py-4 w-full sm:w-auto rounded border border-gray-700 text-white hover:border-neonBlue hover:bg-neonBlue hover:text-black transition uppercase font-heading tracking-widest text-sm text-center">Why Us?</a>
                 </div>
             </div>
         </section>
@@ -254,8 +254,12 @@
     </main>
 
     <!-- Minimal Footer -->
-    <footer class="py-12 text-center text-xs text-gray-500 reveal">
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-gray-500 reveal max-w-7xl mx-auto w-full">
+        <a href="javascript:history.back()" class="text-gray-400 hover:text-neonGreen transition flex items-center gap-2 text-sm uppercase font-bold tracking-widest" title="Go Back">
+            <i class="fa-solid fa-arrow-left"></i> BACK
+        </a>
         <p>&copy; 2026 Gellyball Arena. All rights reserved.</p>
+        <div class="hidden sm:block w-20"></div>
     </footer>
 
     <script>
